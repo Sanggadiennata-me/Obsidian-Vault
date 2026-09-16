@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "54dbc67f6787b002",
+        "id": "66c3122d2dadf8dd",
         "type": "tabs",
         "children": [
           {
-            "id": "ff9afbaf7d827758",
+            "id": "a6f59e6561c18aef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CyberSecurity/Cryptography/Cryptography Classic/3. Cryptography Classic.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "3. Cryptography Classic"
+              "title": "New tab"
             }
           }
         ]
@@ -83,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.5004348754883
+    "width": 200
   },
   "right": {
     "id": "185a65e11649d47b",
@@ -174,53 +170,54 @@
       "bases:Create new base": false
     }
   },
-  "active": "ff9afbaf7d827758",
+  "active": "3e27810ebffc91be",
   "lastOpenFiles": [
+    "Untitled.md",
+    "writeup kmipn/Access Token.md",
+    "writeup kmipn/Write up web.md",
+    "writeup kmipn/Silent Oracle.md",
+    "writeup kmipn/Product Notes.md",
+    "writeup kmipn/Upload Review.md",
+    "writeup kmipn/img/Pasted image 20260910130855.png",
+    "writeup kmipn/img/Pasted image 20260910130620.png",
+    "writeup kmipn/Pasted image 20260910125658.png",
+    "Pasted image 20260910125744.png",
+    "writeup kmipn/img/Pasted image 20260910125821.png",
+    "writeup kmipn/img/Pasted image 20260910123527.png",
+    "writeup kmipn/img/Pasted image 20260910122829.png",
+    "writeup kmipn/img",
+    "writeup kmipn/img/Pasted image 20260910122538.png",
+    "CyberSecurity/Cryptography/Modular Aritmathic/Chinese Remainder Theorem.md",
+    "writeup kmipn",
+    "CyberSecurity/Cryptography/Modular Aritmathic/2. Modular Aritmathic.md",
+    "CyberSecurity/Cryptography/Modular Aritmathic/images/Residue.png",
     "CyberSecurity/Cryptography/Cryptography Classic/Hill Cipher.md",
+    "CyberSecurity/Cryptography/Cryptography Classic/3. Cryptography Classic.md",
+    "CyberSecurity/Cryptography/Cryptography Modern/Symmetric key/AES.md",
+    "CyberSecurity/Cryptography/Cryptography Modern/Asymmetric key/ECC.md",
+    "CyberSecurity/Cryptography/Cryptography Classic/Index of Coincidence dan Kriptanalisis Lanjutan.md",
+    "CyberSecurity/Cryptography/Cryptography Classic/Playfair Cipher.md",
+    "CyberSecurity/Cryptography/Cryptography Classic/Autokey dan Beaufort Cipher.md",
+    "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Columnar Transposition.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Praktek/IndexCoincidence.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Autokey.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Bacon.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Polybius.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Praktek/HillCipher.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Playfair.py",
-    "CyberSecurity/Cryptography/Cryptography Classic/Index of Coincidence dan Kriptanalisis Lanjutan.md",
-    "CyberSecurity/Cryptography/Cryptography Classic/3. Cryptography Classic.md",
-    "CyberSecurity/Cryptography/Cryptography Classic/Autokey dan Beaufort Cipher.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Baconian Cipher.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Pigpen dan Sandi Simbol.md",
-    "CyberSecurity/Cryptography/Cryptography Classic/Playfair Cipher.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Enigma dan Mesin Cipher.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Transposition Cipher.md",
-    "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Columnar Transposition.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Rail Fence Cipher.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Substitution Cipher dan Frequency Analysis.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Caesar Cipher dan ROT.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Vigenere Cipher.md",
-    "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Vigenere.py",
     "CyberSecurity/Cryptography/Cryptography Classic/Atbash dan Affine Cipher.md",
-    "CyberSecurity/Cryptography/Cryptography Classic/Praktek/Affine.py",
     "CyberSecurity/Cryptography/Modular Aritmathic/Modular Inverting.md",
     "CyberSecurity/Forensic/Network Forensic/Pengenalan Network Forensic.md",
     "Terms and Foreign Words/Endpoint.md",
-    "CyberSecurity/Forensic/Network Forensic/3. Network Forensic.md",
-    "Terms and Foreign Words/Interface.md",
-    "Terms and Foreign Words/Command & Control (C2).md",
-    "Terms and Foreign Words/Malware.md",
-    "Untitled.md",
-    "CyberSecurity/Forensic/Network Forensic/TCP IP dan Protokol untuk Investigator.md",
-    "CyberSecurity/Forensic/Network Forensic/Praktek dan Latihan/Praktek 1.md",
-    "CyberSecurity/Cryptography/Cryptography Modern/Asymmetric key/RSA.md",
-    "CyberSecurity/Cryptography/Cryptography Modern/Asymmetric key/ECC.md",
     "DevOps/Docker/Docker Basic/img/Pasted image 20260722162150.png",
-    "Untitled.canvas",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726230404.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726224635.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726203051.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726172514.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726161212.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726161018.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726160109.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260726152035.png",
-    "DevOps/Docker/Docker Basic/img/Pasted image 20260725165418.png"
+    "Untitled.canvas"
   ]
 }
