@@ -1,4 +1,5 @@
 #cybersecurity
+
 Algoritma Euclides itu adalah cara sederhana dan sistematis untuk mencari FPB (Faktor Persekutuan Terbesar) dari dua bilangan. algoritma ini bekerja dengan prinsip bahwa FPB dua bilangan tidak berubah walaupun bilangan yang lebih besar diganti dengan sisa hasil pembagiannya oleh bilangan yang lebih kecil.
 
 Jadi daripada mengecek satu-satu faktor dari angka kecil sampai besar yang capek dan ribet,
@@ -7,7 +8,7 @@ bagi, ambil sisa, tukar posisi, lalu ulangi. Proses ini dilakukan terus sampai s
 
 Karena langkahnya sedikit, cepat, dan selalu pasti berhenti, algoritma Euclides jadi salah satu algoritma klasik paling efisien dan masih dipakai sampai sekarang, termasuk di matematika, pemrograman, dan kriptografi.
 
-## Cara penggunaan:
+# Cara penggunaan:
 
 Misal mempunyai 2 angka
 48 dan 18
@@ -32,16 +33,14 @@ ini bisa juga di sebut dengan modulus atau sisa bagi yang sdh di pelajari sebelu
 18 tadi sdh habis di bagi 12, jadi sisa 12 dan 6(sisanya tadi) yang bekerja
 
 12 ÷ 6 = 2 sisa 0 (habis)
-# Finish:
+### Finish:
 angka tertinggi terakhir sebelum 0 adalah PFB nya, yaitu 6
 
-### Contoh soal 2
+# Contoh soal 2
 Cari FPB dari 56 dan 98:
-
 ### Organisasikan:
 besar = 98
 kecil = 56
-
 ### Hitung sisa bagi
 98 ÷ 56 = 1 sisa 42
 

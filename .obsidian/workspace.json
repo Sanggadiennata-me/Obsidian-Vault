@@ -11,10 +11,14 @@
             "id": "a6f59e6561c18aef",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "CyberSecurity/Cryptography/Modular Aritmathic/Extended GCD.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Extended GCD"
             }
           }
         ]
@@ -79,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 237.9994354248047
   },
   "right": {
     "id": "185a65e11649d47b",
@@ -170,8 +174,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "3e27810ebffc91be",
+  "active": "a6f59e6561c18aef",
   "lastOpenFiles": [
+    "CyberSecurity/Cryptography/Modular Aritmathic/2. Modular Aritmathic.md",
+    "CyberSecurity/Cryptography/Modular Aritmathic/Algoritmh Euclides.md",
+    "CyberSecurity/Cryptography/Modular Aritmathic/GCD.md",
+    "CyberSecurity/Cryptography/Modular Aritmathic/Matematika Cryptography.md",
+    "CyberSecurity/Cryptography/Modular Aritmathic/Chinese Remainder Theorem.md",
     "Untitled.md",
     "writeup kmipn/Access Token.md",
     "writeup kmipn/Write up web.md",
@@ -187,9 +196,7 @@
     "writeup kmipn/img/Pasted image 20260910122829.png",
     "writeup kmipn/img",
     "writeup kmipn/img/Pasted image 20260910122538.png",
-    "CyberSecurity/Cryptography/Modular Aritmathic/Chinese Remainder Theorem.md",
     "writeup kmipn",
-    "CyberSecurity/Cryptography/Modular Aritmathic/2. Modular Aritmathic.md",
     "CyberSecurity/Cryptography/Modular Aritmathic/images/Residue.png",
     "CyberSecurity/Cryptography/Cryptography Classic/Hill Cipher.md",
     "CyberSecurity/Cryptography/Cryptography Classic/3. Cryptography Classic.md",
@@ -214,9 +221,6 @@
     "CyberSecurity/Cryptography/Cryptography Classic/Caesar Cipher dan ROT.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Vigenere Cipher.md",
     "CyberSecurity/Cryptography/Cryptography Classic/Atbash dan Affine Cipher.md",
-    "CyberSecurity/Cryptography/Modular Aritmathic/Modular Inverting.md",
-    "CyberSecurity/Forensic/Network Forensic/Pengenalan Network Forensic.md",
-    "Terms and Foreign Words/Endpoint.md",
     "DevOps/Docker/Docker Basic/img/Pasted image 20260722162150.png",
     "Untitled.canvas"
   ]
