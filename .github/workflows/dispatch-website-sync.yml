@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify the website repository
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.WEBSITE_DISPATCH_TOKEN }}
-          repository: ${{ secrets.WEBSITE_REPOSITORY }}
+          repository: Sanggadiennata-me/Learning-Web-Aryanda
           event-type: vault-sync
           client-payload: >-
-            {"vaultCommit":"${{ github.sha }}","vaultBranch":"${{ github.ref_name }}","vaultRepository":"${{ github.server_url }}/${{ github.repository }}.git"}
+            {"vaultCommit":"${{ github.sha }}","vaultBranch":"${{ github.ref_name }}","repo_clone_url":"${{ github.server_url }}/${{ github.repository }}.git","vaultRepository":"${{ github.server_url }}/${{ github.repository }}.git"}
