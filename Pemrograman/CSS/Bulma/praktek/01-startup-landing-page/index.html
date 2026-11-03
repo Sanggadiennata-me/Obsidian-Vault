@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktek 01: Startup Landing Page (Bulma CSS)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="has-background-light">
+  <!-- Navbar Responsif Bulma -->
+  <nav class="navbar is-white has-shadow is-spaced" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-primary has-text-weight-bold is-size-4" href="#">
+          <i class="fa-solid fa-cube mr-2"></i>BulmaSphere
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarMain" class="navbar-menu">
+        <div class="navbar-start ml-4">
+          <a class="navbar-item is-active" href="#">Beranda</a>
+          <a class="navbar-item" href="#fitur">Fitur Utama</a>
+          <a class="navbar-item" href="#harga">Harga</a>
+          <a class="navbar-item" href="#kontak">Kontak</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light is-rounded">Masuk</a>
+              <a class="button is-primary is-rounded has-text-weight-semibold">Mulai Gratis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section Panggung Utama -->
+  <section class="hero is-primary is-medium">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <span class="tag is-info is-light is-rounded is-medium mb-4 has-text-weight-semibold">
+          🚀 Framework CSS Murni Tanpa Ketergantungan JS
+        </span>
+        <h1 class="title is-1 has-text-weight-extrabold mb-4">
+          Bangun Web Modern dengan Sintaks Manusiawi
+        </h1>
+        <p class="subtitle is-4 max-w-700 mx-auto mb-6">
+          Bulma mengandalkan arsitektur Flexbox murni. Seluruh nama class dirancang sangat mudah dibaca seperti membaca kalimat biasa dalam bahasa Inggris.
+        </p>
+        <div class="buttons is-centered">
+          <a href="#fitur" class="button is-white is-medium is-rounded has-text-primary has-text-weight-bold shadow">
+            Jelajahi Fitur
+          </a>
+          <a href="#kontak" class="button is-primary is-dark is-medium is-rounded">
+            Dokumentasi API
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fitur Utama dengan Kolom Flexbox Bulma -->
+  <section id="fitur" class="section py-6">
+    <div class="container">
+      <div class="has-text-centered mb-6">
+        <h2 class="title is-2 has-text-dark">Kelebihan Menggunakan Bulma</h2>
+        <p class="subtitle is-5 has-text-grey">Arsitektur ringan berbasis flexbox kolom yang proporsional.</p>
+      </div>
+
+      <div class="columns is-variable is-5">
+        <!-- Kolom 1 -->
+        <div class="column is-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4">
+            <div class="card-content p-5">
+              <div class="media mb-4">
+                <div class="media-left">
+                  <span class="icon is-large has-text-primary">
+                    <i class="fa-solid fa-code fa-2x"></i>
+                  </span>
+                </div>
+                <div class="media-content">
+                  <p class="title is-5 mb-1">100% CSS Murni</p>
+                  <p class="subtitle is-6 has-text-grey">Zero JavaScript Lock-in</p>
+                </div>
+              </div>
+              <div class="content has-text-grey-dark">
+                Tidak memaksa Anda menggunakan library JS tertentu. Bebas dipadukan dengan React, Vue, Svelte, atau Vanilla JS murni.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="column is-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4">
+            <div class="card-content p-5">
+              <div class="media mb-4">
+                <div class="media-left">
+                  <span class="icon is-large has-text-info">
+                    <i class="fa-solid fa-table-columns fa-2x"></i>
+                  </span>
+                </div>
+                <div class="media-content">
+                  <p class="title is-5 mb-1">Sistem Kolom Flexbox</p>
+                  <p class="subtitle is-6 has-text-grey">Responsif Alami</p>
+                </div>
+              </div>
+              <div class="content has-text-grey-dark">
+                Cukup bungkus elemen dengan class <code>.columns</code> dan <code>.column</code>, seluruh anak elemen otomatis membagi ruang rata.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="column is-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4">
+            <div class="card-content p-5">
+              <div class="media mb-4">
+                <div class="media-left">
+                  <span class="icon is-large has-text-success">
+                    <i class="fa-solid fa-wand-magic-sparkles fa-2x"></i>
+                  </span>
+                </div>
+                <div class="media-content">
+                  <p class="title is-5 mb-1">Sintaks Sangat Jelas</p>
+                  <p class="subtitle is-6 has-text-grey">Modifier is-* dan has-*</p>
+                </div>
+              </div>
+              <div class="content has-text-grey-dark">
+                Nama class seperti <code>is-primary</code>, <code>is-loading</code>, dan <code>has-text-centered</code> sangat ramah bagi pemula.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Box -->
+  <section id="kontak" class="section pt-0 pb-6">
+    <div class="container">
+      <div class="box p-6 has-background-white shadow-sm border rounded-4">
+        <div class="columns is-vcentered">
+          <div class="column is-7">
+            <h3 class="title is-3 mb-2">Tertarik Mencoba Modul Bulma?</h3>
+            <p class="subtitle is-6 has-text-grey">Daftarkan email Anda untuk mendapatkan pembaruan panduan kode terbaru.</p>
+          </div>
+          <div class="column is-5">
+            <div class="field has-addons">
+              <div class="control is-expanded has-icons-left">
+                <input class="input is-medium is-rounded" type="email" placeholder="nama@email.com">
+                <span class="icon is-left">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+              </div>
+              <div class="control">
+                <button class="button is-primary is-medium is-rounded has-text-weight-bold">
+                  Berlangganan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Sederhana -->
+  <footer class="footer has-background-white py-5 border-top">
+    <div class="content has-text-centered has-text-grey is-size-7">
+      <p>&copy; 2026 BulmaSphere. Dibangun dengan Bulma CSS v1.0.</p>
+    </div>
+  </footer>
+
+  <!-- Vanilla JS untuk Toggle Navbar Burger -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

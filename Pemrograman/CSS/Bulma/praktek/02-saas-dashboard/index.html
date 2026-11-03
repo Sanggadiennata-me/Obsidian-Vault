@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktek 02: SaaS Admin Panel (Bulma CSS)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="has-background-light">
+  <!-- Top Navigation Header -->
+  <header class="navbar is-white has-shadow px-4">
+    <div class="navbar-brand">
+      <span class="navbar-item has-text-weight-bold has-text-primary is-size-5">
+        <i class="fa-solid fa-gauge mr-2"></i>BulmaAdmin
+      </span>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <button id="btnOpenModal" class="button is-primary is-small is-rounded has-text-weight-semibold">
+          <i class="fa-solid fa-plus mr-1"></i> Entri Baru
+        </button>
+      </div>
+      <!-- User Profile Dropdown (CSS is-hoverable) -->
+      <div class="navbar-item">
+        <div class="dropdown is-right is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button is-white" aria-haspopup="true">
+              <span class="icon"><i class="fa-solid fa-circle-user fa-lg has-text-grey"></i></span>
+              <span class="ml-1 has-text-weight-semibold is-size-7">Aryanda</span>
+            </button>
+          </div>
+          <div class="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">Profil Saya</a>
+              <a href="#" class="dropdown-item">Setelan Akun</a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item has-text-danger">Keluar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="section py-5">
+    <div class="container is-fluid max-w-1100">
+      <!-- Breadcrumb Nav -->
+      <nav class="breadcrumb is-small mb-4" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="#" class="has-text-grey">Home</a></li>
+          <li><a href="#" class="has-text-grey">Workspace</a></li>
+          <li class="is-active"><a href="#" aria-current="page">Statistik & Pengguna</a></li>
+        </ul>
+      </nav>
+
+      <!-- Notification Banner -->
+      <div class="notification is-info is-light border-0 mb-5 py-3 px-4">
+        <button class="delete"></button>
+        <i class="fa-solid fa-circle-info mr-2"></i>
+        <strong>Sistem Terkini:</strong> Integrasi webhook berhasil dikonfigurasi ke server produksi tanpa gangguan sinkronisasi.
+      </div>
+
+      <!-- KPI Summary Level / Columns -->
+      <div class="columns is-multiline mb-5">
+        <div class="column is-3">
+          <div class="box p-4 has-background-white shadow-sm border">
+            <div class="level is-mobile mb-2">
+              <div class="level-left">
+                <span class="heading has-text-grey mb-0">TOTAL PENDAPATAN</span>
+              </div>
+              <div class="level-right">
+                <span class="icon has-text-success"><i class="fa-solid fa-coins"></i></span>
+              </div>
+            </div>
+            <div class="title is-4 has-text-dark mb-2">Rp 94.2M</div>
+            <span class="tag is-success is-light is-rounded has-text-weight-bold">
+              <i class="fa-solid fa-arrow-trend-up mr-1"></i> +14.8%
+            </span>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="box p-4 has-background-white shadow-sm border">
+            <div class="level is-mobile mb-2">
+              <div class="level-left">
+                <span class="heading has-text-grey mb-0">PELANGGAN AKTIF</span>
+              </div>
+              <div class="level-right">
+                <span class="icon has-text-info"><i class="fa-solid fa-users"></i></span>
+              </div>
+            </div>
+            <div class="title is-4 has-text-dark mb-2">8,410</div>
+            <span class="tag is-info is-light is-rounded has-text-weight-bold">
+              <i class="fa-solid fa-arrow-trend-up mr-1"></i> +6.1%
+            </span>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="box p-4 has-background-white shadow-sm border">
+            <div class="level is-mobile mb-2">
+              <div class="level-left">
+                <span class="heading has-text-grey mb-0">TIKET DUKUNGAN</span>
+              </div>
+              <div class="level-right">
+                <span class="icon has-text-warning"><i class="fa-solid fa-headset"></i></span>
+              </div>
+            </div>
+            <div class="title is-4 has-text-dark mb-2">18</div>
+            <span class="tag is-warning is-light is-rounded has-text-weight-bold">
+              3 Dalam Proses
+            </span>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="box p-4 has-background-white shadow-sm border">
+            <div class="level is-mobile mb-2">
+              <div class="level-left">
+                <span class="heading has-text-grey mb-0">KAPASITAS SERVER</span>
+              </div>
+              <div class="level-right">
+                <span class="icon has-text-primary"><i class="fa-solid fa-server"></i></span>
+              </div>
+            </div>
+            <div class="title is-4 has-text-dark mb-2">99.9%</div>
+            <span class="tag is-primary is-light is-rounded has-text-weight-bold">
+              Sangat Stabil
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Table Card Box -->
+      <div class="box p-0 has-background-white shadow-sm border overflow-hidden">
+        <div class="p-4 border-bottom is-flex is-justify-content-between is-align-items-center">
+          <h3 class="title is-5 mb-0">Daftar Akun Pengembang</h3>
+          <span class="tag is-light is-rounded">4 Akun Terdaftar</span>
+        </div>
+        <div class="table-container mb-0">
+          <table class="table is-fullwidth is-hoverable is-striped">
+            <thead>
+              <tr class="has-background-light">
+                <th class="pl-4">Nama Lengkap</th>
+                <th>Peran Pekerjaan</th>
+                <th>Status Verifikasi</th>
+                <th>Bergabung</th>
+                <th class="has-text-right pr-4">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pl-4 has-text-weight-semibold">Aryanda Saputra</td>
+                <td>Lead Security Specialist</td>
+                <td><span class="tag is-success is-rounded">Aktif</span></td>
+                <td class="has-text-grey is-size-7">Hari ini, 10:14</td>
+                <td class="has-text-right pr-4">
+                  <button class="button is-small is-light is-rounded">Detail</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="pl-4 has-text-weight-semibold">Bambang Susanto</td>
+                <td>DevOps Engineer</td>
+                <td><span class="tag is-success is-rounded">Aktif</span></td>
+                <td class="has-text-grey is-size-7">Kemarin, 16:30</td>
+                <td class="has-text-right pr-4">
+                  <button class="button is-small is-light is-rounded">Detail</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="pl-4 has-text-weight-semibold">Clarissa Putri</td>
+                <td>UI/UX Designer</td>
+                <td><span class="tag is-warning is-rounded">Menunggu</span></td>
+                <td class="has-text-grey is-size-7">3 hari lalu</td>
+                <td class="has-text-right pr-4">
+                  <button class="button is-small is-light is-rounded">Detail</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="pl-4 has-text-weight-semibold">Dian Nugraha</td>
+                <td>Backend Developer</td>
+                <td><span class="tag is-danger is-rounded">Nonaktif</span></td>
+                <td class="has-text-grey is-size-7">2 minggu lalu</td>
+                <td class="has-text-right pr-4">
+                  <button class="button is-small is-light is-rounded">Detail</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bulma Modal Component -->
+  <div id="modalNewUser" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title is-size-5 has-text-weight-bold">Tambah Akun Pengembang</p>
+        <button class="delete close-modal" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-3">
+          <label class="label is-small">Nama Lengkap</label>
+          <div class="control has-icons-left">
+            <input class="input is-rounded" type="text" placeholder="Contoh: Andi Pratama">
+            <span class="icon is-small is-left"><i class="fa-solid fa-user"></i></span>
+          </div>
+        </div>
+        <div class="field mb-3">
+          <label class="label is-small">Alamat Email</label>
+          <div class="control has-icons-left">
+            <input class="input is-rounded" type="email" placeholder="andi@bulmasphere.com">
+            <span class="icon is-small is-left"><i class="fa-solid fa-envelope"></i></span>
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot is-justify-content-flex-end">
+        <button class="button is-light is-rounded close-modal">Batal</button>
+        <button class="button is-primary is-rounded has-text-weight-semibold">Simpan Akun</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Vanilla JS untuk Modal & Alert -->
+  <script>
+    const modal = document.getElementById('modalNewUser');
+    document.getElementById('btnOpenModal').addEventListener('click', () => modal.classList.add('is-active'));
+    document.querySelectorAll('.close-modal, .modal-background').forEach(el => el.addEventListener('click', () => modal.classList.remove('is-active')));
+    document.querySelectorAll('.notification .delete').forEach(el => el.addEventListener('click', () => el.parentNode.remove()));
+  </script>
+</body>
+</html>
