@@ -1,9 +1,5 @@
 #roadmap 
 
-Panduan terstruktur mempelajari CSS Native mulai dari konsep dasar sintaksis, pemformatan teks dan warna, box model, skema pemosisian, tata letak modern flexbox, hingga proyek praktek antarmuka nyata.
-
----
-
 ### Pembuka:
 1. [Pengenalan Css native](Pengenalan%20Css%20native.md)
 2. [Aturan Styling](Aturan%20Styling.md)
