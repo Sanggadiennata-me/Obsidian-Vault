@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktek 03: Flexbox Dashboard & Cards Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Top Header Bar (Flexbox Space-Between) -->
+    <header class="dashboard-header">
+      <div>
+        <h1>Ringkasan Statistik Sistem</h1>
+        <p class="subtitle">Tata letak responsif menggunakan CSS Flexbox (gap, flex-wrap, align-items)</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn-outline">Filter Waktu</button>
+        <button class="btn-solid">Ekspor Laporan</button>
+      </div>
+    </header>
+
+    <!-- Flexbox Container Cards (Flex-Wrap & Gap) -->
+    <div class="card-grid">
+      <div class="stat-card">
+        <div class="card-top">
+          <span class="icon bg-blue">🌐</span>
+          <span class="badge badge-success">+14.2%</span>
+        </div>
+        <div class="stat-value">128,430</div>
+        <div class="stat-desc">Kunjungan Pengguna Aktif</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="card-top">
+          <span class="icon bg-green">⚡</span>
+          <span class="badge badge-success">+8.7%</span>
+        </div>
+        <div class="stat-value">99.98%</div>
+        <div class="stat-desc">Waktu Aktif Layanan (Uptime)</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="card-top">
+          <span class="icon bg-amber">🛡️</span>
+          <span class="badge badge-warning">2 Pending</span>
+        </div>
+        <div class="stat-value">1,402</div>
+        <div class="stat-desc">Permintaan Firewall Terblokir</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="card-top">
+          <span class="icon bg-purple">💾</span>
+          <span class="badge badge-info">Optimal</span>
+        </div>
+        <div class="stat-value">42.8 GB</div>
+        <div class="stat-desc">Kapasitas Penyimpanan Terpakai</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

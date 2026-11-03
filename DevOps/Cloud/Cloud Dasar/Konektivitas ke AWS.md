@@ -43,7 +43,7 @@ Nah, pengawal tersebut bisa Anda anggap sebagai koneksi VPN yang mengenkripsi (a
 
 Oh, tidak! Sayangnya, sekarang timbul masalah baru terhadap kasus di atas, meskipun Anda memiliki perlindungan yang ekstra. Apa itu? Anda masih menggunakan jalanan yang sama dengan pelanggan lain. Walhasil, pastinya ia akan rentan terhadap kemacetan atau perlambatan lalu lintas.
 
-Hal yang sama pun berlaku untuk koneksi VPN. Memang betul koneksi VPN bersifat pribadi dan dienkripsi, tetapi faktanya ia masih menggunakan koneksi internet reguler dengan _bandwidth_ (jumlah maksimum data yang dapat dikirim) yang terbagi kepada banyak pengguna internet lainnya.
+Hal yang sama pun berlaku untuk koneksi VPN. Memang betul koneksi VPN bersifat pribadi dan dienkripsi, tetapi faktanya ia masih menggunakan koneksi internet reguler dengan [_bandwidth_](Bandwidth.md) (jumlah maksimum data yang dapat dikirim) yang terbagi kepada banyak pengguna internet lainnya.
 
 Lalu, bagaimana jika kita ingin memiliki koneksi pribadi yang mengarah langsung ke VPC?
 

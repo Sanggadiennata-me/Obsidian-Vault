@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktek 02: Navbar & Dropdown Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fixed Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-box">CSS</span>
+        <span class="logo-text">LearningHub</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#" class="nav-item active">Beranda</a>
+        <a href="#" class="nav-item">Tutorial</a>
+        
+        <!-- Dropdown Menu Item (Relative + Absolute) -->
+        <div class="dropdown">
+          <button class="dropdown-btn">
+            Modul Pembelajaran
+            <span class="arrow">▼</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Dasar Box Model</a>
+            <a href="#">Display & Flexbox</a>
+            <a href="#">Skema Positioning</a>
+            <a href="#">Grid & Responsive</a>
+          </div>
+        </div>
+
+        <a href="#" class="nav-item">Tentang</a>
+        <a href="#" class="nav-item">Kontak</a>
+      </nav>
+
+      <div class="nav-action">
+        <button class="btn-primary">Mulai Belajar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero">
+    <h1>Eksplorasi Skema CSS Positioning</h1>
+    <p>Navbar ini menerapkan <code>position: fixed</code> di atas halaman, sedangkan menu dropdown menggunakan kombinasi <code>position: relative</code> pada parent dan <code>position: absolute</code> pada menu pop-up.</p>
+  </main>
+</body>
+</html>

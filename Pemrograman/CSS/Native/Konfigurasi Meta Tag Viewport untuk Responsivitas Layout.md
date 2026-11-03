@@ -15,7 +15,7 @@ Viewport merupakan area yang dapat dilihat oleh pengguna kita pada halaman webs
 
 Sebelum adanya tablet ataupun _handphone_, halaman website didesain hanya untuk ukuran layar komputer desktop. Dengan demikian, banyak sekali website yang menerapkan tampilan dan ukuran yang statis. Jadi, ketika halaman tersebut diakses melalui _handphone_ atau tablet, tampilannya akan mengecil karena tidak disesuaikan.
 
-Untuk mengatasi masalah di atas, kita perlu menetapkan meta tag viewport untuk mengendalikan dan menentukan bentuk dari viewport browser, terutama pada perangkat mobile. Jadi, kita dapat melihat ukuran halaman web layaknya diakses pada desktop device. Namun, hal tersebut tetap memerlukan penggunaan teknik peningkatkan responsivitas karena ukuran viewport-nya yang berbeda–kita akan mempelajari ini pada materi berikutnya.
+Untuk mengatasi masalah di atas, kita perlu menetapkan meta tag viewport untuk mengendalikan dan menentukan bentuk dari viewport browser, terutama pada perangkat mobile. Jadi, kita dapat melihat ukuran halaman web layaknya diakses pada desktop device. Namun, hal tersebut tetap memerlukan penggunaan teknik peningkatkan responsivitas karena ukuran viewport-nya yang berbeda, kita akan mempelajari ini pada materi berikutnya.
 
 Mengatur viewport dapat dilakukan melalui tag `<meta>` yang disisipkan dalam elemen `<head>`. Contohnya berikut.
 ```html

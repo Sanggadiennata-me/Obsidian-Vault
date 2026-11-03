@@ -2,7 +2,7 @@
 Mengapa perlu jaringan komputer?
 agar dapat menghubungkan perangkat lain dengan lainnya yang berguna untuk berkomunikasi atau berbagi sumber daya seperti file.
 
-agar jaringan dapat berfungsi dibutuhkan layanan-layanan yang dapat mengatur pembagian sumber daya, dan dibutuhkan juga aturan-aturan atau ==protocols== yang mengatur komunikasi, beda jenis data beda juga protocols yang digunakan, seperti teks biasa, media, bahkan game sekalipun.
+agar jaringan dapat berfungsi dibutuhkan layanan-layanan yang dapat mengatur pembagian sumber daya, dan dibutuhkan juga aturan-aturan atau ==[protocols](Protokol.md)== yang mengatur komunikasi, beda jenis data beda juga protocols yang digunakan, seperti teks biasa, media, bahkan game sekalipun.
 
 ## Manfaat ketika adanya jaringan komputer
 Easiness (kemudahan)
@@ -63,4 +63,4 @@ Dampak yang paling terlihat adalah:
 		- infrared, 
 		- dan bluetooth.
 - Media Transmisi
-- Repeter, Hub, Switch, Brigde, Router, dan Gateways = Node
+- Repeter, Hub, Switch, Brigde, Router, dan [Gateways](Gateway.md) = Node

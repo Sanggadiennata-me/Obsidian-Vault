@@ -1,57 +1,141 @@
 #programming 
 
-**Flexible box layout** atau **Flexbox** adalah model layout satu dimensi guna menyusun elemen-elemen (flex items) dalam posisi rows atau columns. Hal ini membuat flexbox disebut dengan direction-agnostic atau mengatur tata letak di banyak arah. Hal menarik dari flexbox adalah ia menawarkan penyusunan layout dengan fleksibel karena flex container atau flexbox dapat mengatur dimensi setiap flex-items (child element) sehingga layout yang diinginkan dapat tercapai dengan mudah.
+**Flexible Box Layout** atau **Flexbox** adalah model tata letak (layout) satu dimensi yang dirancang untuk menyusun elemen anak (*flex items*) di dalam elemen induk (*flex container*) baik secara mendatar (baris / row) maupun menurun (kolom / column).
 
-Flex container memperluas flex items untuk mengisi ruang kosong atau menciutkannya sehingga menghindari overflow (dimensi child element yang keluar dari parent element-nya). Dengan hadirnya flexbox, perancangan layout dalam skala yang kecil dapat dilakukan dengan mudah pada halaman web.
+Sebelum hadirnya Flexbox, pembuatan tata letak web sering mengandalkan `float` dan trik `positioning` yang rumit, mudah patah, dan sulit untuk memposisikan elemen tepat di tengah secara vertikal. Flexbox hadir memberikan fleksibilitas penuh: elemen dapat otomatis membesar mengisi ruang kosong, menciut jika ruang sempit, serta membagi jarak secara merata.
 
-### Alasan Flexbox Hadir
-Sebelum hadirnya flexbox, satu-satunya cara untuk membuat layout halaman web adalah float dan positioning. Namun, dalam beberapa kasus berikut, penggunaan kedua properti CSS ini terbatas dan menyulitkan.
-
-- Membuat konten berada di tengah secara vertikal dalam parent element-nya.
-- Membuat semua child element memenuhi ruang dari parent element-nya secara dinamis dan merata.
-- Membentuk child-element dalam layout multiple-column memiliki ukuran height yang sama, meskipun jumlah content di dalamnya tidak sama.
-
-Dari beberapa kasus di atas, layouting pada website akan sulit dijangkau oleh float dan positioning. Di sinilah flexbox hadir untuk menyelesaikan masalah seperti di atas.
-
-### Dasar-Dasar dan Terminologi Flexbox
 ![](image/Terminologi.png)
 
-Pada gambar di atas, terlihat bahwa ada dua istilah khusus pada elemen yang menerapkan flexbox, yaitu flex container dan flex item. **Flex container adalah parent elemen dari seluruh flex items**, sedangkan **flex items adalah elemen yang secara langsung merupakan child dari parent element**.
+---
 
-Selain itu, ada beberapa istilah lain dalam flexbox. Berikut penjelasannya.
+## 1. Konsep Dasar & Sumbu Flexbox
 
-- Main axis: main axis dari flex container adalah arah sumbu utama yang mana flex items akan dijejerkan atau ditata. Perlu diingat, arah dari main axis tidak selalu horizontal. Hal ini bergantung terhadap value dari properti `flex-direction`.
-- Main-start | main-end: flex items akan ditempatkan dalam flex container yang berawal dari main-start dan main-end.
-- Main size: main size merupakan lebar atau tinggi dari flex item yang diposisikan pada sumbu utama (main axis).
-- Cross axis: cross axis adalah sumbu yang arahnya tegak lurus dengan main axis. Biasanya ini terjadi ketika flexbox menerapkan value wrap pada properti `flex-wrap` sehingga susunan layout terlihat dua dimensi.
-- Cross-start | cross-end: flex item yang memenuhi ruang kosong flex container secara vertikal, dimulai dari cross-start hingga cross end. Hal ini dapat kita atur menggunakan properti `align-items`, `align-self`, dan `align-content`.
-- Cross size: lebar atau tinggi dari sebuah flex item yang ditempatkan pada dimensi cross.
+Di dalam Flexbox ada dua sumbu arah utama:
+1. **Main Axis (Sumbu Utama)**: Arah default tempat flex items dijejerkan. Arahnya ditentukan oleh properti `flex-direction`.
+2. **Cross Axis (Sumbu Silang)**: Sumbu yang tegak lurus dengan Main Axis. Jika Main Axis horizontal (kiri ke kanan), maka Cross Axis adalah vertikal (atas ke bawah).
 
-  
+---
 
-### Properti-Properti pada Flex Container
+## 2. Properti untuk Elemen Induk (Flex Container)
 
-Dalam penerapan flexbox, ada properti-properti yang terlibat pada dua hal, yaitu flex container (parent element) dan flex item. Properti-properti pada flex container akan berpengaruh secara langsung kepada flex item dalam menampilkan susunannya. Berikut daftar dan penjelasannya.
+Properti berikut diterapkan langsung pada elemen pembungkus (*parent element*):
 
-- display: mendefinisikan elemen agar disusun sebagai flexible box.
-- flex-direction: menentukan arah susunan flex item dijajarkan.
-- flex-wrap: mengubah perilaku susunan flex item menjadi dua dimensi (jika dibutuhkan).
-- justify-content: mengatur tata letak dari flex item pada main axis.
-- align-items: mirip seperti justify-content, tetapi mengatur child element dalam satu baris pada cross axis.
-- align-content: melakukan perataan terhadap flex item pada setiap baris dalam cross-axis.
-- gap: memberikan jarak atau celah pada flex item.
+### A. Mengaktifkan Flexbox (`display: flex`)
+```css
+.container {
+  display: flex; /* Mengubah container menjadi flex container */
+}
+```
 
-  
+### B. Menentukan Arah (`flex-direction`)
+Mengatur arah penyusunan flex items:
+- `row` (default): Berjejer mendatar dari kiri ke kanan.
+- `row-reverse`: Berjejer mendatar dari kanan ke kiri.
+- `column`: Menumpuk menurun dari atas ke bawah.
+- `column-reverse`: Menumpuk dari bawah ke atas.
 
-### Properti-Properti pada Flex Items
+```css
+.container {
+  display: flex;
+  flex-direction: row; /* atau column */
+}
+```
 
-Setelah mempelajari properti-properti pendukung pada flex container, kita akan membahas properti-properti yang digunakan pada flex item. **Ingat!** Properti yang ditujukan pada flex item hanya akan berpengaruh pada flex item yang ditarget, bukan elemen pembungkusnya (flex container).
+### C. Pembagian Posisi pada Sumbu Utama (`justify-content`)
+Mengontrol bagaimana ruang kosong di sumbu utama didistribusikan ke item-item:
 
-- order: mengatur urutan susunan flex item.
-- flex-grow: melakukan grow (pelebaran ukuran) dari flex item yang ditarget pada main axis.
-- flex-shrink: menyusutkan atau menciutkan ukuran child element jika ukurannya tidak mencukupi ruang container.
-- flex-basis: memberikan ukuran default sebelum sisa ruang container didistribusikan kepada flex item.
-- align-self: mengatur posisi child element secara cross-axis.
+![](image/flexbox_justify_visual.png)
 
-lebih lengkapnya bisa di tonton disini:
-youtube.com/watch?reload=9&v=gNC7bHxEqRk&embeds_referring_euri=https%3A%2F%2Fwww.dicoding.com%2F
+- `flex-start` (default): Item berkumpul di awal container.
+- `center`: Semua item berkumpul tepat di tengah.
+- `flex-end`: Item berkumpul di ujung akhir container.
+- `space-between`: Item pertama di awal, item terakhir di ujung, jarak antar item dibagi rata.
+- `space-around`: Setiap item memiliki jarak rata di kiri dan kanannya.
+- `space-evenly`: Jarak antara item dan dinding pembatas bernilai sama persis.
+
+### D. Perataan pada Sumbu Silang (`align-items`)
+Mengatur perataan vertikal (atau silang) dari item:
+- `stretch` (default): Item meregang memenuhi tinggi container.
+- `center`: Item berada tepat di tengah sumbu silang.
+- `flex-start`: Item merapat ke bagian atas container.
+- `flex-end`: Item merapat ke bagian bawah container.
+
+```css
+.container {
+  display: flex;
+  justify-content: center; /* Tengah horizontal */
+  align-items: center;     /* Tengah vertikal (Perfect Centering) */
+  height: 300px;
+}
+```
+
+### E. Penanganan Pembungkusan Baris (`flex-wrap`)
+Menentukan apakah item dipaksa dalam satu baris atau boleh melompat ke baris baru saat layar mengecil:
+- `nowrap` (default): Semua item dipaksa dalam satu baris (berisiko overflow jika terlalu sempit).
+- `wrap`: Item akan otomatis turun ke baris baru saat ruang horizontal habis.
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+
+### F. Memberikan Jarak Celah (`gap`)
+Cara modern dan paling bersih untuk memberi jarak antar flex items tanpa perlu trik `margin`:
+
+```css
+.container {
+  display: flex;
+  gap: 20px;          /* Jarak 20px di baris dan kolom */
+  row-gap: 15px;      /* Jarak antar baris saja */
+  column-gap: 25px;   /* Jarak antar kolom saja */
+}
+```
+
+---
+
+## 3. Properti untuk Elemen Anak (Flex Items)
+
+Properti berikut diterapkan pada masing-masing child element di dalam container:
+
+### A. Pembesaran dan Penciutan (`flex-grow`, `flex-shrink`, `flex-basis`)
+1. **`flex-grow`**: Menentukan seberapa besar item akan membesar mengisi sisa ruang kosong (default: `0`).
+2. **`flex-shrink`**: Menentukan kemampuan item untuk mengecil jika ruang container terlalu sempit (default: `1`).
+3. **`flex-basis`**: Ukuran awal item sebelum sisa ruang didistribusikan (default: `auto`).
+
+> **Tips Singkat (Shorthand `flex`)**:
+> Developer umumnya menggunakan shorthand `flex: 1;` yang setara dengan `flex: 1 1 0;` agar semua item memiliki porsi lebar yang sama rata secara dinamis.
+
+```css
+.sidebar {
+  flex: 0 0 250px; /* Lebar tetap 250px, tidak membesar maupun menciut */
+}
+
+.main-content {
+  flex: 1;         /* Mengisi seluruh sisa ruang yang tersedia */
+}
+```
+
+### B. Perataan Individual (`align-self`)
+Digunakan jika ada satu item tertentu yang ingin memiliki perataan silang berbeda dari item lainnya:
+
+```css
+.item-khusus {
+  align-self: flex-end; /* Hanya item ini yang merapat ke bawah */
+}
+```
+
+### C. Urutan Tampilan (`order`)
+Mengubah urutan visual item tanpa mengubah struktur kode HTML (default: `order: 0`). Nilai lebih kecil akan tampil lebih awal.
+
+---
+
+## 4. Studi Kasus Desain: Responsive Dashboard Cards
+
+Penerapan Flexbox yang paling umum adalah menyusun kumpulan kartu (*cards*) statistik yang otomatis menyesuaikan diri pada berbagai ukuran layar menggunakan `flex-wrap: wrap` dan `gap`:
+
+![](image/praktek_flexbox_dashboard.png)
+
+Proyek lengkap dapat dicoba langsung pada folder praktek:
+- Berkas HTML & CSS: [Praktek 03: Flexbox Dashboard Cards](praktek/03-flexbox-dashboard-cards/index.html)

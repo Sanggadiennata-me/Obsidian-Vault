@@ -1,5 +1,5 @@
 #programming 
-_Hello, welcome to this module!_ Asynchronous process adalah topik yang sangat esensial untuk dipahami sebagai developer JavaScript. Sebagai bocoran, materi ini akan mengajarkan Anda bahwa kode JavaScript tidak harus selalu ditunggu hingga kelar agar kode yang mengikutinya dapat dieksekusi. Maknanya, antrean kode setelahnya akan tetap berjalan sembari menunggu dan mengharapkan hasil dari kode sebelumnya. Menarik, ya?
+_Hello, welcome to this module!_ [Asynchronous](Asynchronous.md) process adalah topik yang sangat esensial untuk dipahami sebagai developer JavaScript. Sebagai bocoran, materi ini akan mengajarkan Anda bahwa kode JavaScript tidak harus selalu ditunggu hingga kelar agar kode yang mengikutinya dapat dieksekusi. Maknanya, antrean kode setelahnya akan tetap berjalan sembari menunggu dan mengharapkan hasil dari kode sebelumnya. Menarik, ya?
 
 Meskipun terbilang topik baru, pembahasan ini akan kami bungkus agar Anda dapat belajar dengan mudah dan nyaman. Berikut adalah beberapa poin yang akan Anda miliki setelah menghabiskan materi ini.
 

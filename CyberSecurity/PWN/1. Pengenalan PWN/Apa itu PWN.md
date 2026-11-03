@@ -25,7 +25,7 @@ Bug di binary seperti:
 - **Use after free** - memakai memori yang sudah dibebaskan
 - **Integer overflow** - angka melebihi batas tipe data
 
-Exploit = menyusun input khusus (payload) yang mengubah bug menjadi kontrol penuh.
+[Exploit](Exploit.md) = menyusun input khusus ([payload](Payload.md)) yang mengubah bug menjadi kontrol penuh.
 
 ## Konsep yang wajib dikuasai
 

@@ -75,7 +75,7 @@ Agar SAN dapat bekerja dengan baik, diperlukan beberapa komponen utama.
 
 **Fibre Channel (FC)** adalah teknologi jaringan berkecepatan tinggi yang dirancang khusus untuk komunikasi antara server dan perangkat penyimpanan.
 
-Fibre Channel menawarkan latensi rendah dan bandwidth tinggi sehingga sangat cocok digunakan pada lingkungan perusahaan yang membutuhkan performa tinggi.
+Fibre Channel menawarkan latensi rendah dan [bandwidth](Bandwidth.md) tinggi sehingga sangat cocok digunakan pada lingkungan perusahaan yang membutuhkan performa tinggi.
 
 Walaupun saat ini SAN juga dapat menggunakan teknologi seperti **iSCSI** melalui jaringan Ethernet, Fibre Channel masih banyak digunakan pada pusat data berskala besar.
 

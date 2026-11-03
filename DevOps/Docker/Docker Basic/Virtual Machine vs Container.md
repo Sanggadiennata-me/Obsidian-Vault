@@ -1,6 +1,6 @@
 #devops 
 ![](img/Pasted%20image%2020260722155556.png)
-apakah docker adalah virtual machine (VM)? tidak, docker adalah container manager. 
+apakah docker adalah [virtual machine (VM)](Virtual%20Machine%20(VM).md)? tidak, docker adalah [container](Container.md) manager. 
 contoh: jika kita ingin menyewa server di hosting, kita biasanya akan menyewa VM nya itu, nah beda dengan docker, docker tidak menggunakan konsep Virtual Machine tetapi menggunakan konsep Kontainer.
 
 jadi apa bedanya VM dengan Container? 

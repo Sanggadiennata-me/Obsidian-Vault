@@ -1,6 +1,6 @@
 #tool 
 
-Sekarang kita masuk ke tool yang menjaga kepercayaan seluruh proses forensic: **hashing**. `sha256sum` dan `hashdeep` digunakan untuk memverifikasi integrity evidence. Kalau `file`, `strings`, dan `xxd` membantu kita menemukan informasi, maka hashing membantu kita membuktikan bahwa evidence yang kita analisis **masih sama dengan evidence awal**.
+Sekarang kita masuk ke tool yang menjaga kepercayaan seluruh proses forensic: **[hashing](Hash.md)**. `sha256sum` dan `hashdeep` digunakan untuk memverifikasi integrity evidence. Kalau `file`, `strings`, dan `xxd` membantu kita menemukan informasi, maka hashing membantu kita membuktikan bahwa evidence yang kita analisis **masih sama dengan evidence awal**.
 
 Secara konsep:
 
@@ -14,7 +14,7 @@ Nilai hex unik
 Isi berubah → hash berubah
 ```
 
-Hash adalah sidik jari digital. Dua file dengan isi yang sama menghasilkan hash yang sama. Satu bit saja berubah, hash langsung berbeda.
+[Hash](Hash.md) adalah sidik jari digital. Dua file dengan isi yang sama menghasilkan hash yang sama. Satu bit saja berubah, hash langsung berbeda.
 
 ---
 ## 1. Instalasi
