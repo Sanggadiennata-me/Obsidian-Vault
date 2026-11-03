@@ -1,16 +1,59 @@
 #programming 
-setelah memecahkan masalah menjadi kecil kecil, sekarang kita memahami pola dari permasalahan tersebut. 
-apa yang di maksud dengan mempelajari pola? 
 
-Sebelum masuk dalam pembahasan tentang pembelajaran pola, kita akan sedikit bercerita tentang kemampuan otak manusia dalam mengingat wajah seseorang. Tahukah Anda bahwa otak manusia dapat mengingat kurang lebih 5.000 sampai 10.000 wajah? Mike Burton, seorang profesor psikologi di University of York telah melakukan studi terhadap pengenalan wajah selama bertahun-tahun dan hasil utama yang didapatkannya selalu sama. Berikut kutipan dari Mike Burton kepada kantor berita The Guardian.
+**Pattern Recognition (Pengenalan Pola)** adalah kemampuan untuk mengenali keteraturan, kemiripan, atau kesamaan karakteristik antara masalah yang sedang dihadapi dengan masalah lain yang pernah diselesaikan sebelumnya.
 
-“Orang-orang ternyata kurang tepat dalam mengenali wajah asli dari sebuah foto identitas, namun kita dapat mengenali teman dan kolega dalam berbagai kondisi"
+Dalam dunia pemrograman, programmer hebat jarang sekali merancang solusi benar-benar dari nol (*reinventing the wheel*). Mereka mengamati pola dari masalah baru, menyadari bahwa masalah tersebut memiliki struktur yang mirip dengan masalah lama, lalu mengadaptasi solusi yang sudah terbukti berhasil.
 
-Mekanisme seseorang dapat mengenali wajah memang masih menjadi misteri. Namun, beberapa peneliti berhipotesis pengenalan tersebut bisa dari genetik, bentuk fisik wajah, lingkungan, kebiasaan, atau gabungan dari semua itu. Nah, dari sana kita dapat mengetahui bahwa terdapat ciri-ciri tertentu yang bisa membantu kita mengenali seseorang. Ciri tersebut merupakan pola yang dapat kita pelajari dan kita gunakan untuk mendapat sebuah solusi. Dalam computational thinking pengenalan pola disebut juga dengan Pattern Recognition.
+## 1. Analogi Kehidupan Sehari-hari
 
-_Pattern Recognition_ merupakan teknik pemecahan masalah dengan melihat perbedaan atau persamaan pola dari berbagai permasalahan. Sehingga kita dapat memprediksi atau memproyeksikan solusi apa yang harus kita lakukan. Ketika kita dihadapkan dengan banyak permasalahan, kita harus bisa mempelajari polanya supaya dapat menyelesaikan dengan cepat.
+Bayangkan seorang mekanik bengkel berpengalaman:
+- Ketika seorang pengendara datang mengeluhkan *"motor saya tersendat-sendat saat digas di kecepatan tinggi"*, mekanik tidak perlu membongkar seluruh baut motor dari roda hingga stang.
+- Mengapa? Karena berdasarkan pengalaman puluhan motor sebelumnya, gejala tersendat-sendat tersebut membentuk pola yang khas: masalah pasokan bahan bakar di karburator atau busi yang kotor.
+- Pengenalan pola ini membuat diagnosis mekanik menjadi sangat cepat dan tepat sasaran.
 
-Bayangkan Anda mendapat tugas untuk menggambar 3 jenis kucing, yaitu kucing persia, anggora, dan kucing oranye. Kita harus mempelajari persamaan dan perbedaan setiap jenis kucing. Persamaan yang dapat diambil misalnya adalah ketiga jenis kucing di atas memiliki bulu, berkaki empat, bermata dua, dan mempunyai ekor. Persamaan tersebut merupakan ciri-ciri kucing secara umum sehingga dapat kita terapkan untuk ketiga jenis kucing di atas. Sedangkan perbedaan dari ketiga jenis kucing tersebut. Misalnya dari segi warna, panjang kaki, dan kelebatan bulu. 
-Setelah mengetahui perbedaan dan persamaan tersebut kita dapat mulai menggambarkan setiap jenis kucingnya dengan cepat dan tepat. Bayangkan ketika kita tidak mengetahui pola atau perbedaan dan persamaan dari ketiga jenis kucing tadi. Pasti waktu yang dibutuhkan akan semakin lama karena harus melihat kembali jenis kucing yang sedang dibuat satu per satu. Atau mungkin semisal belum mengetahui bentuk kucing sama sekali, mungkin saja digambarkan tanpa ekor atau memiliki dua kaki. 
-Jika tadi kita ibaratkan dengan tiga jenis kucing, maka bagaimana jika Anda mendapat tugas menggambar kucing dan singa? Tekniknya sama yaitu pelajari terlebih dahulu pola di antara keduanya, maka Anda akan lebih mudah dan cepat untuk menggambarkannya.
+## 2. Contoh Pengenalan Pola dalam Pemrograman
 
+### A. Pola Pencarian Data (Search Pattern)
+Perhatikan ketiga fitur pada aplikasi berbeda berikut:
+1. Fitur pencarian kontak telepon di aplikasi WhatsApp.
+2. Fitur pencarian nama produk di aplikasi e-commerce Tokopedia.
+3. Fitur pencarian judul lagu di aplikasi Spotify.
+
+Meskipun ketiga aplikasi tersebut tampak berbeda tampilannya, di balik layar ketiganya menggunakan **pola algoritma pencarian yang identik**:
+
+```text
+1. Ambil teks kata kunci yang diketik pengguna di kolom input.
+2. Ubah kata kunci menjadi huruf kecil semua (agar tidak sensitif kapital).
+3. Buka koleksi data yang tersimpan.
+4. Periksa satu per satu: apakah nama item mengandung kata kunci tersebut?
+5. Masukkan item yang cocok ke dalam daftar hasil.
+6. Tampilkan daftar hasil ke layar pengguna.
+```
+
+Sekali Anda menguasai pola ini, Anda dapat membangun fitur pencarian untuk aplikasi apa pun di masa depan.
+
+### B. Pola Akumulator (Menghitung Total Nilai)
+Ketika Anda ingin:
+- Menghitung total belanjaan kasir.
+- Menghitung nilai rata-rata ujian siswa dalam satu kelas.
+- Menghitung total langkah kaki harian dari sensor smartwatch.
+
+Ketiganya menggunakan pola akumulator yang sama persis:
+```javascript
+// 1. Siapkan wadah penampung awal dengan nilai 0
+let total = 0;
+
+// 2. Lakukan perulangan untuk setiap nilai yang ada
+for (let i = 0; i < daftarNilai.length; i++) {
+  // 3. Tambahkan nilai saat ini ke dalam wadah penampung
+  total += daftarNilai[i];
+}
+
+// 4. Wadah 'total' kini berisi akumulasi seluruh data
+console.log("Total akhir: " + total);
+```
+
+## 3. Manfaat Mempelajari Pengenalan Pola bagi Pemula
+
+1. **Mempercepat Waktu Belajar**: Anda tidak perlu menghafal ratusan kode yang berbeda. Anda cukup memahami 5 sampai 10 pola dasar pemrograman (seperti pola loop akumulator, pola filtering, pola validasi, pola toggle).
+2. **Menghindari Penulisan Ulang Kode (DRY - Don't Repeat Yourself)**: Ketika menemukan pola yang berulang di beberapa tempat dalam program Anda, Anda dapat mengekstrak pola tersebut menjadi sebuah fungsi mandiri yang dapat dipanggil berkali-kali.

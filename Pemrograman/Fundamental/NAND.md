@@ -1,15 +1,53 @@
 #programming 
-NAND adalah logika negasi dari and, atau kebalikan and.
-NAND sendiri yaitu NOT AND yang akan menghasilkan output berlawanan dari and biasa.
 
-jika table kebenaran and seperti ini:
-1 & 1 = 1
-0 & 1 = 0
-1 & 0 = 0
-0 & 0 = 0
+Gerbang logika **NAND** adalah singkatan dari **NOT AND**. Sesuai namanya, gerbang ini merupakan kombinasi dari operasi gerbang [AND](AND.md) yang hasilnya langsung dibalikkan oleh gerbang [NOT](NOT.md).
 
-maka table kebenaran NAND seperti ini:
-!(1 & 1) = 0
-!(0 & 1) = 1
-!(1 & 0) = 1
-!(0 & 0) = 1
+Secara matematis, rumusnya adalah:
+```text
+NAND = NOT (A AND B) atau !(A && B)
+```
+
+Logika NAND akan menghasilkan nilai benar (`true` atau 1) pada hampir semua kondisi, **KECUALI jika kedua masukannya sama-sama bernilai benar (`true`)**.
+
+## 1. Tabel Kebenaran (Truth Table)
+
+Mari kita bandingkan hasil gerbang AND biasa dengan hasil gerbang NAND:
+
+| Masukan A | Masukan B | Hasil Logika AND `(A && B)` | Hasil Logika NAND `!(A && B)` |
+| :---: | :---: | :---: | :---: |
+| `0` (false) | `0` (false) | `0` | **`1` (true)** |
+| `0` (false) | `1` (true)  | `0` | **`1` (true)** |
+| `1` (true)  | `0` (false) | `0` | **`1` (true)** |
+| `1` (true)  | `1` (true)  | `1` | **`0` (false)** |
+
+## 2. Analogi Kehidupan Sehari-hari
+
+Bayangkan sebuah sistem pembatas kapasitas lift di gedung bertingkat:
+- Masukan A: Beban muatan melebihi 800 kg (`true`).
+- Masukan B: Jumlah penumpang melebihi 10 orang (`true`).
+
+Kondisi lift aman berjalan (NAND bernilai `true`) selama:
+- Muatan tidak berlebih dan penumpang tidak berlebih (`1`).
+- Salah satu dari syarat tersebut belum melanggar batas (`1`).
+
+Lift hanya akan membunyikan alarm dan menolak bergerak (NAND bernilai `false` atau 0) **apabila muatan berlebih DAN penumpangnya juga berlebih secara bersamaan**.
+
+## 3. Contoh Penggunaan dalam Kode Pemrograman
+
+```javascript
+let bateraiKritis = true;
+let modeHematAktif = true;
+
+// Sistem menolak menjalankan sinkronisasi data berat jika baterai sekarat dan hemat daya aktif
+let bolehSinkronisasi = !(bateraiKritis && modeHematAktif);
+
+if (bolehSinkronisasi) {
+  console.log("Sinkronisasi berkas berjalan di latar belakang.");
+} else {
+  console.log("Sinkronisasi ditunda demi menghemat daya baterai perangkat.");
+}
+```
+
+## 4. Keistimewaan Gerbang NAND (Universal Gate)
+
+Dalam ilmu arsitektur komputer dan elektronika digital, gerbang NAND disebut sebagai **Universal Gate**. Hal ini karena hanya dengan menggunakan kombinasi beberapa gerbang NAND saja, para insinyur komputer dapat merakit semua gerbang logika lainnya (AND, OR, NOT, XOR, XNOR) hingga membentuk prosesor komputer modern seutuhnya.

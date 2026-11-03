@@ -1,21 +1,82 @@
 #programming 
-### Statement
-Aplikasi terdiri dari kumpulan instruksi tunggal yang berkaitan satu sama lain. Misalnya dalam buku resep masakan kita sering menemui instruksi, “Panaskan air hingga 200 derajat celcius.”, “Diamkan adonan di dalam kulkas selama 3 jam.”, dan banyak lagi instruksi lainnya. Dalam aturan menulis sebuah kode pemrograman, instruksi di atas sering disebut dengan istilah _statement_.
 
+Memahami bagaimana komputer membedakan satu kalimat instruksi dengan instruksi lainnya serta bagaimana komputer memperlakukan spasi kosong (*whitespace*) adalah keterampilan dasar yang harus dikuasai oleh setiap calon programmer.
+
+## 1. Apa Itu Statement?
+
+Sebuah aplikasi komputer tersusun dari gabungan banyak instruksi tunggal yang saling berhubungan. Di dalam ilmu pemrograman, satu baris instruksi lengkap yang dapat dieksekusi oleh komputer disebut **Statement (Pernyataan)**.
+
+Analogi di dunia nyata adalah instruksi dalam buku resep masakan:
+- *"Panaskan minyak di atas wajan dengan api sedang."* -> Satu statement.
+- *"Masukkan irisan bawang merah dan tumis hingga harum."* -> Satu statement berikutnya.
+- *"Tuangkan 200 mililiter air matang."* -> Satu statement berikutnya.
+
+Contoh statement dalam kode pemrograman:
+```javascript
+let harga = 25000;                     // Statement 1: Mendeklarasikan variabel harga
+let jumlah = 4;                        // Statement 2: Mendeklarasikan variabel jumlah
+let total = harga * jumlah;            // Statement 3: Menghitung perkalian
+console.log("Total Bayar: " + total);  // Statement 4: Mencetak hasil ke layar
 ```
-“Tampilkan Hello World di layar.”
 
-“Tambahkan nilai 1 pada skor saat ini.” 
+Setiap statement harus berupa instruksi yang tuntas dan jelas maksud tujuannya. Komputer mengeksekusi statement-statement ini secara berurutan, baris demi baris, dari atas ke bawah.
 
-“Pindahkan objek 5 piksel ke kanan.”
+## 2. Mengenal Whitespace (Spasi Kosong, Tab, dan Baris Baru)
+
+**Whitespace** adalah karakter kosong yang kita ketikkan pada keyboard namun tidak tampak sebagai huruf atau angka di layar, meliputi:
+- Tombol Spasi (Spacebar).
+- Tombol Tabulasi (Tab) untuk membuat indentasi menjorok ke dalam.
+- Tombol Enter (Newline) untuk berpindah ke baris baru.
+
+Bagaimana komputer memperlakukan karakter kosong ini? Jawabannya terbagi menjadi dua keluarga besar bahasa pemrograman:
+
+### A. Bahasa Bebas Whitespace (C-Style Languages)
+Pada bahasa seperti C, C++, Java, PHP, dan JavaScript, komputer pada dasarnya mengabaikan jumlah spasi dan baris baru di luar tanda petik teks. 
+
+Sebagai contoh, ketiga gaya penulisan berikut menghasilkan eksekusi yang **100% sama persis** di mata komputer:
+
+```javascript
+// Gaya 1: Rapi dan standar dibaca manusia
+let a = 10;
+let b = 20;
+let hasil = a + b;
+
+// Gaya 2: Dibuat rapat dalam satu baris
+let a=10;let b=20;let hasil=a+b;
+
+// Gaya 3: Penuh spasi dan baris kosong berantakan
+let      a     = 
+    10;
+let 
+b = 20;
+let hasil = a + 
+       b;
 ```
 
-Contoh di atas merupakan statement sederhana yang berhubungan dengan dunia pemrograman. Sebuah statement harus jelas dan lengkap. Maksud dari lengkap adalah menjelaskan tentang hasil yang ingin dicapai. Jika statement yang ditulis tidak lengkap, maka aplikasi tidak akan berjalan lancar.
+Walaupun komputer tidak mempermasalahkan Gaya 2 atau Gaya 3, manusia yang membacanya akan merasa sangat pusing. Oleh karena itu, kita menggunakan spasi dan indentasi rapi semata-mata demi kenyamanan manusia yang membaca dan merawat kode tersebut.
 
-### Whitespace
-Whitespace saat kita mengetik kode biasanya berupa spasi atau tab untuk indentasi. Selain itu kita juga menggunakan enter dan ada baris kosong untuk membedakan setiap kode yang ada. Sebenarnya seberapa berpengaruh _whitespace_ pada kode yang kita tulis?
+### B. Bahasa Sensitif Whitespace (Contoh: Python)
+Pada bahasa **Python**, whitespace **BUKAN SEKADAR HIASAN**, melainkan aturan sintaksis resmi yang sangat ketat!
 
-Kebanyakan bahasa pemrograman tidak terlalu memperhatikan _whitespace_. Sehingga jika kita menambahkan tiga sampai lima baris kosong atau menambahkan spasi sebanyak mungkin juga tidak masalah. Namun, whitespace juga penting untuk _formatting_ kode kita supaya lebih mudah dipahami. Mungkin jika kode yang dibuat hanya beberapa baris dan menggunakan whitespace yang tidak beraturan masih bisa dipahami. Tetapi jika kode yang dibuat kompleks sampai ratusan baris atau lebih, maka harus memperhatikan whitespace supaya setiap baris kodenya bisa dipahami.
+Python tidak menggunakan tanda kurung kurawal `{}` untuk menandai blok kode percabangan atau perulangan, melainkan menggunakan **Indentasi (Spasi Menjorok)**:
 
-Penggunaan whitespace yang rapi juga memungkinkan developer lain tidak kebingungan saat ingin memperbaiki atau menambahkan fitur lainnya. Penggunaan indentasi juga berkaitan dalam kurung kurawal dalam sebuah kode.
+```python
+# Kode Python yang Benar:
+nilai = 85
 
+if nilai >= 75:
+    print("Selamat!")            # Menjorok 4 spasi ke dalam (bagian dari blok if)
+    print("Anda dinyatakan lulus") # Menjorok 4 spasi ke dalam
+
+print("Selesai") # Rata kiri (dijalankan setelah if selesai)
+```
+
+Jika di Python Anda salah mengetik jumlah spasi, program akan langsung mogok dan mengeluarkan pesan kesalahan:
+`IndentationError: unexpected indent`.
+
+## 3. Aturan Emas Kebersihan Kode (Clean Code Formatting)
+
+Agar kode Anda disukai oleh rekan programmer lain:
+1. **Gunakan Indentasi Konsisten**: Pilihlah standar 2 spasi atau 4 spasi untuk setiap blok kode yang menjorok, dan pertahankan konsistensi tersebut di seluruh berkas proyek.
+2. **Beri Spasi di Sekitar Operator**: Tulis `total = harga * jumlah` alih-alih `total=harga*jumlah`.
+3. **Beri Satu Baris Kosong Antar Blok Logika**: Gunakan tombol Enter sekali untuk memisahkan bagian persiapan variabel, bagian perhitungan utama, dan bagian keluaran (*output*) agar kode tampak bernapas dan tidak sesak.

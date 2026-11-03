@@ -1,14 +1,54 @@
 #programming 
-Menurut Technopedia, logika pemrograman adalah sebuah kemampuan dasar yang menerapkan pemahaman operasi logika terhadap data ke dalam ilmu komputer (https://www.techopedia.com/definition/3945/programming-logic). Tidak berhenti di sana, logika pemrograman juga dapat membantu Anda untuk menyelesaikan masalah (_problem solving_), baik dalam bidang pemrograman maupun kehidupan sehari-hari.
 
-Ada 3 jenis logika pemrograman yang akan kita bahas, antara lain:
+Dalam dunia nyata, manusia sering mengambil keputusan berdasarkan intuisi, perasaan, atau kebiasaan. Misalnya, jika teman Anda bertanya "Apakah hari ini panas?", Anda mungkin menjawab "Lumayan panas, tapi masih bisa tahan". Jawaban tersebut sangat wajar bagi manusia, namun bagi komputer, kata "lumayan" atau "masih bisa tahan" sama sekali tidak memiliki arti.
 
-1. Logika aritmatika 
-2. Logika perbandingan 
-3. Logika perulangan
+Komputer adalah mesin yang sangat patuh namun sama sekali tidak memiliki perasaan atau asumsi. Komputer hanya memahami kepastian mutlak: **Benar (True)** atau **Salah (False)**, **Ada (1)** atau **Tidak Ada (0)**.
 
-mari kita ilustrasikan manfaat belajar logika pemrograman dalam kehidupan sehari-hari dengan cerita sederhana. Bayangkan di awal bulan Anda pergi ke swalayan untuk membeli kebutuhan rumah tangga. Kemudian Anda melihat sebuah plakat bertuliskan “Khusus hari ini. Diskon 20% untuk semua jenis barang yang dijual.” Tentunya hal tersebut menarik perhatian Anda karena lumayan untuk menghemat pengeluaran belanja.
+Oleh karena itu, **Logika Pemrograman** adalah kemampuan untuk menyusun aturan berpikir yang jelas, terstruktur, dan tidak ambigu sehingga masalah nyata yang dihadapi manusia dapat diterjemahkan menjadi serangkaian keputusan yang dapat dieksekusi secara tepat oleh komputer.
 
-Kemudian Anda lihat plakatnya lebih dekat lagi untuk mengetahui syarat dan ketentuan diskon yang tertulis kecil di pojok kanan bawah. Di sana tertulis, “Diskon berlaku dengan minimum pembelian senilai 300 ribu rupiah.”  Nah, di sini Anda dapat menerapkan salah satu logika pemrograman yaitu perbandingan. Sehingga di benak Anda kemudian muncul pemikiran berikut, “Jika jumlah harga barang yang saya beli lebih dari atau sama dengan 300 ribu, maka saya berhak mendapat diskon 20%.” Setelah berpikir demikian Anda memutuskan untuk memborong barang-barang yang dijual dan memastikan totalnya sudah lebih dari atau sama dengan 300 ribu.
+## 1. Dua Cara Manusia Bernalar: Induktif dan Deduktif
 
-ada 2 jenis logika yaitu [Induktif](Induktif.md) dan [Deduktif](Deduktif.md)
+Sebelum merancang logika di dalam kode, pemrogram mengandalkan dua pola penalaran dasar untuk memahami permasalahan:
+
+1. **[Penalaran Induktif](Induktif.md)**: Pola berpikir yang berangkat dari pengamatan fakta-fakta spesifik di lapangan, menemukan keteraturan atau tren, lalu menarik sebuah kesimpulan umum.
+   - *Contoh*: "Setiap sore pukul 17.00, server selalu mengalami lonjakan pengunjung yang lambat. Maka saya menyimpulkan bahwa jam 17.00 adalah jam sibuk pengguna."
+2. **[Penalaran Deduktif](Deduktif.md)**: Pola berpikir yang berangkat dari sebuah aturan umum yang sudah pasti benar, lalu menerapkannya pada kasus khusus untuk mendapatkan kesimpulan yang tidak terbantahkan.
+   - *Contoh*: "Semua transaksi di atas Rp500.000 wajib diverifikasi dengan kode OTP. Pelanggan X berbelanja sebesar Rp750.000. Maka sistem wajib meminta kode OTP kepada Pelanggan X."
+
+## 2. Tiga Pilar Logika Pemrograman
+
+Dalam membuat aplikasi, hampir seluruh instruksi dibangun di atas tiga pilar logika utama:
+
+```text
++--------------------------------------------------------------+
+|                   TIGA PILAR LOGIKA KODE                     |
++------------------------------+-------------------------------+
+| 1. Logika Aritmatika         | Menghitung nilai angka        |
+|                              | (+, -, *, /, %)               |
++------------------------------+-------------------------------+
+| 2. Logika Perbandingan       | Memeriksa kondisi benar/salah |
+|                              | (==, !=, >, <, >=, <=)        |
++------------------------------+-------------------------------+
+| 3. Logika Perulangan         | Mengulang proses otomatis     |
+|                              | (for, while)                  |
++------------------------------+-------------------------------+
+```
+
+### A. [Logika Aritmatika](Logika%20Aritmatika.md)
+Digunakan untuk segala bentuk perhitungan matematis: menghitung harga setelah diskon, menentukan sisa saldo pengguna, menghitung skor dalam game, hingga menentukan titik koordinat tampilan di layar.
+
+### B. [Logika Perbandingan](Logika%20Perbandingan.md)
+Digunakan untuk mengevaluasi suatu keadaan: apakah nilai ujian siswa lebih dari 75? Apakah saldo rekening lebih besar atau sama dengan jumlah penarikan? Apakah kata sandi yang dimasukkan sama dengan kata sandi asli? Hasil dari logika perbandingan ini selalu berupa nilai Boolean: `true` (benar) atau `false` (salah).
+
+### C. [Logika Perulangan](Logika%20Perulangan.md)
+Digunakan untuk mengeksekusi instruksi yang sama berkali-kali secara efisien tanpa harus menulis ulang kode tersebut. Misalnya: mengirim email konfirmasi ke 1.000 peserta, mencetak 50 baris data dari basis data, atau menggerakkan animasi karakter 60 kali setiap detik.
+
+## 3. Menggabungkan Kondisi dengan [Gerbang Logika](Gerbang%20Logika.md)
+
+Dalam situasi nyata, sebuah keputusan jarang sekali hanya bergantung pada satu syarat tunggal. Sering kali kita harus memeriksa beberapa syarat sekaligus:
+
+- "Boleh masuk ujian jika **sudah melunasi SPP** DAN **tingkat kehadiran di atas 80%**" -> Membutuhkan logika [AND](AND.md).
+- "Diskon berlaku jika pembayaran menggunakan **Kartu Kredit** ATAU **Dompet Digital**" -> Membutuhkan logika [OR](OR.md).
+- "Tampilkan tombol Masuk jika pengguna **TIDAK sedang login**" -> Membutuhkan logika pembalik [NOT](NOT.md).
+
+Dengan menguasai fondasi logika ini, Anda akan memiliki pola pikir analitis yang kokoh. Ketika nanti berpindah ke bahasa pemrograman apa pun (Python, JavaScript, PHP, C++, Java), Anda tidak akan kebingungan, karena yang berubah hanyalah cara penulisan sintaksisnya, sedangkan cara berpikir logisnya tetap 100% sama.

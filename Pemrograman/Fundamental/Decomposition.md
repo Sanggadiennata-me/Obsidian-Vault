@@ -1,16 +1,49 @@
 #programming 
-Kemampuan memecah permasalahan menjadi bagian-bagian kecil merupakan hal alami yang dimiliki manusia dan sangat berguna untuk banyak hal. Bayangkan ada sebuah mesin pabrik yang besar dan rumit. Menurut Anda bagaimanakah proses pengiriman mesin tersebut dari pihak pembuat hingga sampai di pabrik tersebut? Jika langsung diangkut dalam bentuk yang besar pasti menyusahkan proses pengirimannya. Selain itu juga beresiko rusak di perjalanannya juga. 
 
-Supaya lebih mudah maka mesin tersebut dipecah menjadi beberapa bagian dan dikirimkan per bagian. Sehingga ketika sudah sampai, teknisi pabrik yang berbekal buku panduan akan merakit mesin tersebut. Sehingga dari ilustrasi di atas kita melihat masalah dari proses pengiriman mesin yang besar yang tidak memungkinkan langsung dikirim dalam bentuk utuh. Maka dari itu kita perlu memecah beberapa komponen menjadi bagian-bagian kecil untuk mempermudah proses pengiriman. Jika kita hubungkan dengan computational thinking, maka teknik pemecahan masalah menjadi bagian-bagian kecil juga bisa disebut dengan decomposition. Tujuan dari decomposition ini sendiri adalah membuatnya lebih mudah dikelola dan dikerjakan.
+**Decomposition (Dekomposisi)** adalah teknik berpikir komputasional dengan cara memecah masalah yang besar, kompleks, atau menakutkan menjadi bagian-bagian komponen kecil yang lebih sederhana, terisolasi, dan mudah diselesaikan satu per satu.
 
-Kita ambil contoh sederhana lainnya yaitu membuat nasi goreng. Membuat nasi goreng bukanlah satu perintah yang langsung bisa dikerjakan. Di dalamnya harus kita pecah terlebih dahulu supaya lebih mudah dikerjakan. Berikut bagian-bagian kecil dari contoh kasus membuat nasi goreng.
+Bagi pemula, ketika diminta membuat sebuah program (misalnya aplikasi kasir atau game sederhana), sering kali muncul rasa bingung dan kewalahan: *"Dari mana saya harus mulai?"*. Dekomposisi adalah obat dari kebingungan tersebut.
 
-- Apa saja alat yang dibutuhkan?
-- Apa saja bahan-bahannya?
-- Berapa lama waktu yang dibutuhkan?
-- Bagaimana cara memasaknya?
-- Bagaimana cara penyajiannya?
+## 1. Analogi Kehidupan Sehari-hari
 
-Dengan adanya tugas-tugas kecil seperti di atas mulai dari menyiapkan alat dan bahan hingga cara memasak, maka kita dapat mulai mengerjakannya satu per satu. Misalnya kita menyiapkan alat terlebih dahulu seperti kompor, penggorengan, dan spatula. Kemudian beralih ke bahan-bahannya seperti minyak goreng, sepiring nasi, telur, penyedap rasa, dan sebagainya. Dengan teknik decomposition tersebut, maka kita tidak lagi melihat sebuah permasalahan sebagai hal yang kompleks. Karena kita telah memecahnya menjadi bagian atau tugas-tugas kecil yang bisa dikerjakan.
+Bayangkan Anda diminta membersihkan sebuah rumah besar yang sangat berantakan:
+- Jika Anda memandang rumah itu sebagai satu tugas raksasa *"Bersihkan Rumah"*, Anda akan merasa lelah sebelum mulai.
+- Namun jika Anda menerapkan dekomposisi, Anda memecahnya menjadi tugas-tugas kecil:
+  1. Bersihkan kamar tidur (rapikan kasur, sapu lantai).
+  2. Bersihkan ruang tamu (lap meja, tata bantal sofa).
+  3. Bersihkan dapur (cuci piring, buang sampah).
+  4. Bersihkan kamar mandi.
 
-Contoh Decomposition ketika belajar, misalnya disini saya mengambil contoh materi belajar Cryptography RSA, ketika anda kesulitan memahami materi tersebut, anda bisa memecahkannya menjadi bagian yang kecil kecil terlebih dahulu yang menjadi fundamental ilmu tersebut. dengan cara belajar aritmatika terlebih dahulu, dilanjut dengan modular, lalu GCA, dan terakhir faktorisasi. dengan memahami fundamental dari suatu ilmu itu, maka akan mudah saja jika ingin melanjutkan ke ilmu intinya.
+Dengan membaginya menjadi unit kecil, setiap tugas terasa ringan dan dapat diselesaikan dengan fokus penuh.
+
+## 2. Contoh Dekomposisi dalam Pemrograman: Membuat Game Flappy Bird
+
+Jika seseorang berkata *"Buatlah game Flappy Bird!"*, itu terdengar sulit. Namun mari kita dekomposisi game tersebut menjadi komponen-komponen mandiri:
+
+```text
+                           PEMBUATAN GAME FLAPPY BIRD
+                                       |
+    +------------------+---------------+---------------+------------------+
+    |                  |                               |                  |
+    v                  v                               v                  v
+[1. Karakter]    [2. Pipa Halangan]              [3. Mekanika Tabrakan] [4. Sistem Skor & UI]
+- Gambar burung  - Buat pipa atas & bawah        - Cek jika koordinat   - Hitung pipa dilewati
+- Efek gravitasi - Celah acak di tengah            burung menyentuh     - Tampilkan angka skor
+- Lompat ke atas - Gerakkan pipa ke arah kiri      pipa atau tanah      - Tampilkan Game Over
+  saat spasi                                     - Jika kena, hentikan
+  ditekan                                          permainan
+```
+
+Dengan memecahnya seperti di atas:
+1. Hari pertama: Anda cukup fokus membuat burung bisa jatuh dan melompat.
+2. Hari kedua: Anda fokus membuat pipa muncul dan bergeser.
+3. Hari ketiga: Anda menghubungkan tabrakan burung dengan pipa.
+4. Hari keempat: Anda memasang skor dan tampilan Game Over.
+
+Tiba-tiba, proyek yang tadinya terasa mustahil berhasil diselesaikan dengan rapi tanpa stres.
+
+## 3. Keuntungan Menerapkan Dekomposisi
+
+1. **Memudahkan Pembagian Kerja Tim**: Dalam tim pengembang profesional, modul yang sudah didekomposisi dapat dikerjakan secara paralel oleh beberapa programmer sekaligus.
+2. **Mempermudah Pencarian Kesalahan (Debugging)**: Jika game tidak bisa melompat, Anda tahu pasti masalahnya ada di modul gravitasi/kontrol burung, sehingga Anda tidak perlu memeriksa modul pipa atau modul skor.
+3. **Kode Dapat Digunakan Kembali (Reusability)**: Komponen kecil yang sudah rapi dapat dimanfaatkan kembali untuk proyek lain di masa depan tanpa perlu menulis ulang dari nol.

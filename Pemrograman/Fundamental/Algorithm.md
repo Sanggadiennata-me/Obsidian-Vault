@@ -1,10 +1,51 @@
 #programming 
- Algoritma merupakan sekumpulan alur instruksi yang berurutan untuk menyelesaikan permasalahan. Sehingga kita akan merangkai sekumpulan instruksi tersebut menjadi urutan yang terstruktur, logis, dan mudah dipahami. Ketika kita memberikan algoritma yang tidak cukup efisien terhadap komputer, maka hasilnya juga pasti tidak seperti yang diharapkan. Begitupun dalam kehidupan sehari-hari, jika kita tidak menyusun langkah-langkah penyelesaian dengan perencanaan yang baik, maka hasilnya juga tidak baik.
 
-Proses yang dimulai dari memecah masalah menjadi bagian kecil hingga abstraksi dan mengurutkannya menjadi urutan yang tepat sesuai jenis permasalahan juga bisa disebut algoritma. Algoritma yang dibuat harus memuat beberapa hal yaitu, titik awal, titik akhir, dan serangkaian instruksi yang jelas. 
+**Algorithm (Perancangan Algoritma)** adalah tahap dalam berpikir komputasional di mana kita menyusun serangkaian langkah instruksi logis, terurut, pasti, dan tidak ambigu untuk menyelesaikan suatu tugas atau memecahkan permasalahan dari awal hingga selesai.
 
-Ibaratkan proses penyusunan algoritma ini dengan alur kegiatan yang harus dilakukan untuk berangkat ke sekolah. Mulai dari bangun tidur, mandi, menggosok gigi, sarapan, hingga tiba di sekolah. Setiap kegiatan juga memiliki detailnya sendiri-sendiri, misal mandi pukul 6, sarapan nasi goreng, pergi ke sekolah naik sepeda, dll. Dari rangkaian kegiatan tersebut secara tidak langsung Anda telah menerapkan algoritma yang terstruktur setiap hari ketika berangkat ke sekolah.
+Setelah sebuah masalah didekomposisi, polanya dikenali, dan informasinya diabstraksikan, langkah selanjutnya adalah merancang instruksi kerja yang dapat dieksekusi oleh komputer secara otomatis.
 
-Teknik menyusun algoritma ada 2 (dua) cara yaitu pseudocode dan flowchart. Pernah mendengar dua istilah tersebut? Flowchart atau bisa disebut dengan diagram alir merupakan bentuk penggambaran dengan pendekatan visual terkait langkah-langkah dan keputusan untuk melakukan sebuah proses, alur kerja, ataupun algoritma.
+## 1. Lima Syarat Wajib Algoritma yang Baik (Kriteria Knuth)
 
-Sedangkan Pseudocode merupakan istilah dalam pemrograman untuk menuliskan sebuah sintaks, statement, algoritma, dan lainnya dalam bahasa yang bisa dipahami oleh manusia. Sederhananya, pseudocode adalah bentuk representasi dari kode kita nantinya dengan versi yang human readable, bukan computer readable.
+Ilmuwan komputer legendaris Donald Knuth menetapkan lima kriteria utama yang harus dipenuhi oleh setiap algoritma yang valid:
+
+1. **Input (Masukan)**: Algoritma memiliki nol atau lebih data masukan yang diberikan dari luar sebelum proses dimulai.
+2. **Output (Keluaran)**: Algoritma harus menghasilkan minimal satu keluaran yang merupakan solusi dari masalah yang dikerjakan.
+3. **Definiteness (Kepastian & Tidak Ambigu)**: Setiap instruksi langkah harus jelas, terdefinisi secara presisi, dan tidak menimbulkan multitafsir. Instruksi seperti *"tambahkan sedikit garam"* adalah instruksi ambigu; instruksi *"tambahkan 5 gram garam"* adalah instruksi yang pasti.
+4. **Finiteness (Keterbatasan / Titik Henti)**: Algoritma harus memiliki titik awal dan titik akhir. Setelah menjalankan sejumlah langkah yang terhingga, algoritma **harus berhenti**, bukan berputar tanpa henti (*infinite loop*).
+5. **Effectiveness (Efektivitas)**: Setiap langkah yang ditulis harus cukup sederhana sehingga benar-benar mungkin dikerjakan dan diselesaikan dalam batas waktu yang wajar.
+
+## 2. Dua Cara Menyajikan Algoritma
+
+Sebelum menuliskan algoritma ke dalam bahasa pemrograman nyata, ada dua teknik utama yang digunakan programmer untuk merancang dan mendiskusikan alur logika:
+
+### A. Diagram Alir Visual (Flowchart)
+Flowchart menggambarkan urutan proses menggunakan bagan visual dengan simbol-simbol standar internasional:
+- **Kapsul Oval (Terminator)**: Menandai titik `Mulai (Start)` dan titik `Selesai (End)`.
+- **Persegi Panjang (Process)**: Menandai tindakan pemrosesan atau perhitungan nilai matematika (misal: `hitung total = harga * jumlah`).
+- **Jajar Genjang (Input / Output)**: Menandai pembacaan data masukan atau penampilan hasil ke layar.
+- **Belah Ketupat (Decision / Keputusan)**: Menandai titik percabangan kondisi dengan dua jalur panah keluar: `Ya (True)` atau `Tidak (False)`.
+- **Garis Panah (Flowline)**: Menunjukkan arah aliran langkah demi langkah.
+
+### B. Kode Semu (Pseudocode)
+Pseudocode adalah cara menuliskan algoritma menggunakan bahasa manusia (bahasa Indonesia atau Inggris) yang disusun menyerupai struktur kode pemrograman tanpa terikat aturan titik koma atau sintaksis bahasa tertentu.
+
+Contoh Pseudocode Menentukan Kelulusan Siswa:
+```text
+ALGORITMA CekKelulusan:
+  INPUT nilaiSiswa DARI pengguna
+
+  IF nilaiSiswa >= 75 THEN
+    OUTPUT "Selamat, Anda Dinyatakan Lulus!"
+  ELSE
+    OUTPUT "Maaf, Anda Harus Mengikuti Ujian Remedial."
+  END IF
+SELESAI
+```
+
+Keunggulan pseudocode adalah siapapun bisa membacanya dan memahaminya secara instan, baik programmer Python, programmer JavaScript, maupun orang awam yang bukan programmer sekalipun.
+
+## 3. Mengapa Komputer Membutuhkan Algoritma yang Presisi?
+
+Manusia memiliki akal sehat (*common sense*) untuk mengisi celah informasi yang kurang. Jika Anda menyuruh teman Anda: *"Tolong belikan nasi goreng di warung depan"*, teman Anda otomatis tahu bahwa dia harus memakai sandal, membawa uang, menyeberang jalan dengan hati-hati, memesan, membayar, dan membawa pulang bungkusan nasi tersebut.
+
+Komputer tidak memiliki akal sehat. Jika Anda tidak menginstruksikan langkah memeriksa saldo atau langkah menyimpan data, komputer tidak akan melakukannya secara ajaib. Setiap detail langkah harus didefinisikan secara sadar di dalam algoritma Anda.

@@ -1,47 +1,70 @@
 #programming 
-### Keyword
-Anda pasti pernah membaca Kamus Bahasa Indonesia. Tahukah Anda berapa jumlah kosakata atau _keywords_ yang ada dalam kamus Bahasa Indonesia? Kurang lebih ada 111.000 kosakata dan 127.000 makna kata di dalamnya. Bayangkan jika Anda harus menghafal semuanya, pasti sedikit menyulitkan, bukan? Sedangkan, keywords dalam bahasa pemrograman jauh lebih sedikit dari itu. Kita ambil contoh satu bahasa pemrograman yaitu Java yang memiliki 50 keywords. Bahkan bahasa Python hanya memiliki kurang lebih 33 keywords. Semakin sering kita _ngoding_, pasti akan hafal dengan sendirinya.
 
-contoh keyword dalam python:
+Dua konsep mendasar yang akan selalu Anda temui saat pertama kali mempelajari pemrograman adalah kata kunci khusus yang dipesan oleh bahasa komputer (**Keyword**) dan cara merancang logika program dalam bahasa manusia (**Pseudocode**).
 
-| Keyword dalam Python |         |        |
-| -------------------- | ------- | ------ |
-| and                  | exec    | not    |
-| assert               | finally | or     |
-| break                | for     | pass   |
-| class                | from    | print  |
-| continue             | global  | raise  |
-| def                  | if      | return |
-| del                  | import  | try    |
-| elif                 | in      | while  |
-| else                 | is      | with   |
-| except               | lambda  | yield  |
-Kita tidak bisa memberi nama variabel yang sama dengan nama keyword. Misal kita ingin membuat sebuah variabel _int if_ atau _string for_, maka kompiler akan mengirimkan pesan eror karena Anda menggunakan keyword sebagai nama variabel.
+## 1. Kata Kunci Khusus (Reserved Keywords)
 
-### Pseudocode
-Pseudocode merupakan istilah dalam pemrograman untuk menuliskan sebuah sintaks, statement, algoritma, dan lainnya dalam bahasa yang bisa dipahami oleh manusia. Sederhananya, pseudocode adalah bentuk representasi dari kode kita nantinya dengan versi yang human readable, bukan computer readable.
+Dalam bahasa manusia, kita mengenal ribuan kosakata dalam kamus. Namun di dalam bahasa pemrograman, jumlah kata perintah inti (*keywords*) sebenarnya sangat sedikit dan ramah dihafalkan:
+- Bahasa **Python** hanya memiliki sekitar 35 keyword.
+- Bahasa **JavaScript** memiliki sekitar 60 keyword.
+- Bahasa **Go** hanya memiliki 25 keyword.
 
-pseudocode sangat penting sekali sebelum memulai sebuah program. Itu akan melatih kita tentang bagaimana program tersebut berjalan dan berpikir.
+Keyword adalah kata-kata khusus yang telah dipesan oleh pembuat bahasa pemrograman dan memiliki fungsi spesifik yang sudah ditentukan oleh sistem.
 
-### Contoh pembuatan Pseudocode
+### Tabel Contoh Keyword Populer dalam Python
+| Keyword | Fungsi Singkat |
+| :--- | :--- |
+| `if`, `elif`, `else` | Mengatur percabangan keputusan. |
+| `for`, `while` | Mengatur perulangan kode. |
+| `def`, `return` | Mendefinisikan fungsi dan mengembalikan nilai. |
+| `True`, `False` | Nilai kebenaran tipe data Boolean. |
+| `and`, `or`, `not` | Operator gerbang logika. |
+| `import`, `from` | Mengambil modul kode dari berkas lain. |
+| `class` | Membuat cetak biru objek (OOP). |
 
-Sebagai contoh kita ingin membuat aplikasi login. Ketika pengguna memasukkan email dan password yang sesuai dengan data yang tersimpan di database, ia dapat masuk ke halaman utama. Jika tidak sesuai, maka pengguna dipersilakan untuk memasukkan email dan password kembali.
+> [!WARNING] Aturan Penamaan Variabel Terkait Keyword
+> Anda **TIDAK BOLEH** menggunakan kata kunci di atas sebagai nama variabel buatan Anda sendiri. 
+> Misalnya kode `let if = 5;` atau `let for = "Aryanda";` akan langsung ditolak oleh komputer dengan pesan *SyntaxError: Unexpected token* karena komputer mengira Anda sedang ingin membuat percabangan atau perulangan, bukan membuat wadah variabel.
 
-Tenang saja, dalam Pseucode tidak ada standar khusus dalam hal penulisan. Namun, kita harus tetap membuatnya sederhana dan mudah dipahami.
+## 2. Kode Semu (Pseudocode)
 
-Sebagai contoh, hasilnya seperti di bawah ini.
+Sebelum mulai mengetik baris kode asli yang rumit dengan tanda kurung dan titik koma, programmer profesional hampir selalu menyusun alur berpikirnya terlebih dahulu dalam bentuk **Pseudocode (Kode Semu)**.
+
+Pseudocode adalah cara menuliskan instruksi program menggunakan bahasa manusia sehari-hari (bisa bahasa Indonesia atau bahasa Inggris) yang diformat menyerupai struktur kode pemrograman tanpa terikat aturan ketat bahasa tertentu.
+
+Tujuan utama pseudocode adalah **memastikan alur logika Anda sudah benar 100% sebelum Anda mulai berurusan dengan sintaksis bahasa komputer**.
+
+## 3. Contoh Praktis: Merancang Pseudocode Sistem Login
+
+Bayangkan kita ingin membuat sistem otentikasi login pengguna:
+- Pengguna memasukkan alamat email dan kata sandi.
+- Sistem mencocokkan data tersebut dengan basis data.
+- Jika cocok, pengguna dipersilakan masuk ke halaman utama dasbor.
+- Jika tidak cocok, sistem menampilkan pesan peringatan dan meminta pengguna mencoba kembali.
+
+Berikut adalah contoh penulisan pseudocode yang rapi dan mudah dipahami:
+
+```text
+ALGORITMA SistemLogin:
+
+  // 1. Ambil input dari pengguna satu per satu
+  BACA inputEmail DARI kolom_email
+  BACA inputPassword DARI kolom_password
+
+  // 2. Lakukan pengecekan kondisi ke basis data
+  JIKA (inputEmail COCOK DENGAN database.email) DAN (inputPassword COCOK DENGAN database.password) MAKA:
+      TAMPILKAN "Selamat Datang! Login Berhasil."
+      ARAHKAN PENGGUNA KE "Halaman_Dasbor"
+  LAINNYA:
+      TAMPILKAN "Kombinasi email atau password salah. Silakan coba lagi."
+      BERSIHKAN KOLOM inputPassword
+  AKHIR_JIKA
+
+SELESAI
 ```
-Get input email from user.
-Get input password from user.
 
-Check input user.
-IF (email and password) equals to data on database
-     Go to homepage
- ELSE
-     PRINT login gagal, silakan ulangi kembali
-     User input email and password again
- END IF
-```
-Oke, kita mulai dari yang pertama, alurnya adalah membuat aplikasi login yang berasal dari input email dan password pengguna. Untuk mendapatkan data email dan password, kita dapat menuliskan `get input email from user`. Untuk mengambil email dan password kita harus mendapatkannya satu per satu. Karena itulah kita menuliskan email terlebih dahulu di sini, kemudian baru langkah yang selanjutnya yaitu kita mendapatkan password. Kita bisa menggunakan kata-kata `get input password from user`. Jadi, di sini tidak ada hal khusus yang harus diperhatikan, yang terpenting adalah alur dan isi dari yang kita buat. Oke?
-
-Nah, langkah selanjutnya yaitu kita akan melakukan pengecekan, yaitu pengecekan jika email dan password yang dimasukkan pengguna sesuai dengan data yang tersimpan di database. Untuk melakukan pengecekan, kita bisa menggunakan percabangan. Salah satu percabangan yang bisa kita gunakan yaitu **If-Else**. Jadi, kita tuliskan terlebih dahulu `check input user` karena di sini kita akan melakukan pengecekan.
+Perhatikan betapa jelasnya alur di atas:
+- Siapa pun yang membaca pseudocode tersebut (baik programmer junior, programmer senior, maupun manajer produk) dapat langsung memahami alur kerja sistem dalam hitungan detik.
+- Ketika pseudocode ini diberikan kepada programmer Python, ia akan menerjemahkannya menggunakan `if ... else:`.
+- Ketika diberikan kepada programmer JavaScript, ia akan menerjemahkannya menggunakan `if (...) { ... } else { ... }`.
+- Alur logikanya tetap sama persis, yang berbeda hanyalah pakaian bahasanya.
