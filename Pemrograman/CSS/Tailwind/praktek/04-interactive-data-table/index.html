@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktek 04: Interactive Admin Data Table</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 p-6 md:p-10 font-sans text-slate-800">
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+    <!-- Table Header Bar -->
+    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div>
+        <h2 class="text-xl font-bold text-slate-900">Daftar Pengguna Aktif</h2>
+        <p class="text-sm text-slate-500 mt-0.5">Kelola data pelanggan, hak akses, dan status verifikasi sistem.</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input type="text" placeholder="Cari nama atau email..." class="px-3.5 py-2 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-64">
+        <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl shadow-sm transition">
+          + Tambah
+        </button>
+      </div>
+    </div>
+
+    <!-- Responsive Table Container -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-sm text-slate-600">
+        <!-- Table Head with Arbitrary Child Selector -->
+        <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-500 font-semibold border-b border-slate-200 [&>tr>th]:py-3.5 [&>tr>th]:px-6">
+          <tr>
+            <th>Pengguna</th>
+            <th>Peran</th>
+            <th>Status</th>
+            <th>Tanggal Daftar</th>
+            <th class="text-right">Aksi</th>
+          </tr>
+        </thead>
+        <!-- Table Body with Even Striped Rows -->
+        <tbody class="divide-y divide-slate-100 [&>tr]:transition-colors">
+          <!-- Row 1 -->
+          <tr class="even:bg-slate-50/50 hover:bg-blue-50/40">
+            <td class="py-4 px-6 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">AS</div>
+              <div>
+                <div class="font-semibold text-slate-900">Aryanda S.</div>
+                <div class="text-xs text-slate-400">aryanda@example.com</div>
+              </div>
+            </td>
+            <td class="py-4 px-6 font-medium text-slate-700">Administrator</td>
+            <td class="py-4 px-6">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Aktif
+              </span>
+            </td>
+            <td class="py-4 px-6 text-slate-500">12 Feb 2026</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-slate-400 hover:text-blue-600 font-semibold text-xs">Edit</button>
+            </td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr class="even:bg-slate-50/50 hover:bg-blue-50/40">
+            <td class="py-4 px-6 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs">BP</div>
+              <div>
+                <div class="font-semibold text-slate-900">Budi Pratama</div>
+                <div class="text-xs text-slate-400">budi@example.com</div>
+              </div>
+            </td>
+            <td class="py-4 px-6 font-medium text-slate-700">Editor</td>
+            <td class="py-4 px-6">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Pending
+              </span>
+            </td>
+            <td class="py-4 px-6 text-slate-500">28 Jan 2026</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-slate-400 hover:text-blue-600 font-semibold text-xs">Edit</button>
+            </td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr class="even:bg-slate-50/50 hover:bg-blue-50/40">
+            <td class="py-4 px-6 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-xs">CD</div>
+              <div>
+                <div class="font-semibold text-slate-900">Citra Dewi</div>
+                <div class="text-xs text-slate-400">citra@example.com</div>
+              </div>
+            </td>
+            <td class="py-4 px-6 font-medium text-slate-700">Pelanggan</td>
+            <td class="py-4 px-6">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Aktif
+              </span>
+            </td>
+            <td class="py-4 px-6 text-slate-500">04 Jan 2026</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-slate-400 hover:text-blue-600 font-semibold text-xs">Edit</button>
+            </td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr class="even:bg-slate-50/50 hover:bg-blue-50/40">
+            <td class="py-4 px-6 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center text-xs">DW</div>
+              <div>
+                <div class="font-semibold text-slate-900">Dodi Wijaya</div>
+                <div class="text-xs text-slate-400">dodi@example.com</div>
+              </div>
+            </td>
+            <td class="py-4 px-6 font-medium text-slate-700">Pelanggan</td>
+            <td class="py-4 px-6">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Nonaktif
+              </span>
+            </td>
+            <td class="py-4 px-6 text-slate-500">19 Des 2025</td>
+            <td class="py-4 px-6 text-right">
+              <button class="text-slate-400 hover:text-blue-600 font-semibold text-xs">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Table Footer / Pagination -->
+    <div class="p-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
+      <span>Menampilkan 1 hingga 4 dari 42 data</span>
+      <div class="flex items-center gap-1">
+        <button class="px-2.5 py-1.5 border rounded-lg hover:bg-slate-50 font-medium">Sebelumnya</button>
+        <button class="px-2.5 py-1.5 border bg-blue-600 text-white rounded-lg font-medium">1</button>
+        <button class="px-2.5 py-1.5 border rounded-lg hover:bg-slate-50 font-medium">2</button>
+        <button class="px-2.5 py-1.5 border rounded-lg hover:bg-slate-50 font-medium">Selanjutnya</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
