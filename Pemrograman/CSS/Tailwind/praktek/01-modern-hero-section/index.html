@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktek 01: Modern SaaS Hero Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-gradient-to-tr from-blue-600 to-indigo-500 rounded-xl flex items-center justify-center text-white font-bold shadow-md shadow-blue-500/20">
+          TW
+        </div>
+        <span class="font-bold text-lg text-slate-900 tracking-tight">TailwindForge</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#" class="hover:text-blue-600 transition">Fitur</a>
+        <a href="#" class="hover:text-blue-600 transition">Komponen</a>
+        <a href="#" class="hover:text-blue-600 transition">Harga</a>
+        <a href="#" class="hover:text-blue-600 transition">Dokumentasi</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="text-sm font-semibold text-slate-600 hover:text-slate-900 px-3 py-2">Masuk</button>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm hover:shadow transition transform active:scale-95">Daftar Gratis</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Content -->
+  <main class="relative overflow-hidden pt-12 pb-20">
+    <!-- Glow Background Blur -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[300px] bg-gradient-to-tr from-blue-400 to-indigo-300 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <!-- Announcement Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-6 shadow-sm">
+        <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
+        <span>Versi 2.0 Kini Tersedia</span>
+        <span class="text-slate-400">|</span>
+        <span class="hover:underline cursor-pointer">Lihat Catatan Rilis &rarr;</span>
+      </div>
+
+      <!-- Main Headline with Gradient Text -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+        Bangun Antarmuka Modern <br>
+        <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Lebih Cepat dengan Utility-First</span>
+      </h1>
+
+      <!-- Subtitle Paragraph -->
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+        Tinggalkan penamaan class CSS yang membingungkan. Gunakan ribuan class atomik siap pakai untuk merancang layout responsif, interaksi mikro, dan tema gelap langsung di markup HTML Anda.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
+        <a href="#" class="w-full sm:w-auto px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 transition transform hover:-translate-y-0.5 active:translate-y-0 text-sm">
+          Mulai Belajar Sekarang
+        </a>
+        <a href="#" class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-semibold rounded-xl shadow-sm transition text-sm">
+          Lihat Komponen Contoh
+        </a>
+      </div>
+
+      <!-- Metrics Proof -->
+      <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 max-w-xl mx-auto">
+        <div>
+          <div class="text-2xl font-bold text-slate-900">4.9 / 5</div>
+          <div class="text-xs text-slate-500 mt-1">Rating Pengembang</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-slate-900">50K+</div>
+          <div class="text-xs text-slate-500 mt-1">Pengguna Aktif</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-slate-900">99.9%</div>
+          <div class="text-xs text-slate-500 mt-1">Uptime Sistem</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
