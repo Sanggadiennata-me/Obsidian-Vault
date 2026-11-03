@@ -7,7 +7,7 @@ setelah itu, saya akan menjelasakan apa saja kebutuhan sebelum membuat software 
 [Rancangan Software](Rancangan%20Software/Rancangan%20Software.md)
 
 Infrastructure:
-[Html](Html/Html.md)
+[HTML](Html/00.%20HTML.md)
 [CSS](CSS/CSS.md)
 
 Bahasa Pemrograman:

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulir Registrasi Konferensi Teknologi Nusantara 2026</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 20px;
+      margin: 0;
+    }
+    .form-card {
+      max-width: 750px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #1e3a8a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-top: 0;
+    }
+    fieldset {
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    legend {
+      font-weight: bold;
+      color: #1e40af;
+      padding: 0 8px;
+    }
+    .field {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    input[type="url"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #94a3b8;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    .hint {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 6px;
+    }
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    button[type="submit"] {
+      background-color: #16a34a;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button[type="submit"]:hover {
+      background-color: #15803d;
+    }
+    details {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px;
+      margin-top: 25px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #1e3a8a;
+    }
+    dialog {
+      border: none;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+      max-width: 450px;
+      text-align: center;
+    }
+    dialog::backdrop {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .btn-close {
+      background: #dc2626;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-card">
+    <header>
+      <h1>Pendaftaran Nusantara DevCon 2026</h1>
+      <p>Konferensi Pengembang Web dan Arsitektur Cloud Terbesar di Indonesia. Silakan lengkapi formulir pendaftaran di bawah ini.</p>
+    </header>
+
+    <!-- Formulir Pendaftaran Lengkap -->
+    <form id="formRegistrasi">
+      
+      <!-- Bagian 1: Data Pribadi Peserta -->
+      <fieldset>
+        <legend>1. Data Pribadi Peserta</legend>
+
+        <div class="field">
+          <label for="namaLengkap">Nama Lengkap Sesuai KTP <span style="color: red;">*</span></label>
+          <input type="text" id="namaLengkap" name="nama" placeholder="Masukkan nama resmi Anda" required minlength="3" maxlength="60">
+        </div>
+
+        <div class="field">
+          <label for="emailPeserta">Alamat Surel (Email) <span style="color: red;">*</span></label>
+          <input type="email" id="emailPeserta" name="email" placeholder="nama@domain.com" required>
+          <div class="hint">E-Tiket resmi dan barcode masuk akan dikirimkan ke email ini.</div>
+        </div>
+
+        <div class="field">
+          <label for="noTelepon">Nomor WhatsApp / HP <span style="color: red;">*</span></label>
+          <input type="tel" id="noTelepon" name="telepon" placeholder="Contoh: 081234567890" pattern="[0-9]{10,14}" required>
+          <div class="hint">Format 10 sampai 14 digit angka tanpa spasi atau tanda hubung.</div>
+        </div>
+
+        <div class="field">
+          <label for="asalKota">Kota Domisili (Didukung Fitur Datalist)</label>
+          <input list="daftarKota" id="asalKota" name="kota" placeholder="Ketik atau pilih kota Anda">
+          <!-- Elemen Datalist untuk Autocomplete Native -->
+          <datalist id="daftarKota">
+            <option value="Jakarta">
+            <option value="Bandung">
+            <option value="Surabaya">
+            <option value="Yogyakarta">
+            <option value="Semarang">
+            <option value="Medan">
+            <option value="Makassar">
+            <option value="Denpasar">
+          </datalist>
+        </div>
+      </fieldset>
+
+      <!-- Bagian 2: Preferensi Tiket & Sesi -->
+      <fieldset>
+        <legend>2. Kategori Tiket dan Sesi Konferensi</legend>
+
+        <div class="field">
+          <label>Pilih Jenis Tiket Masuk <span style="color: red;">*</span></label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="jenisTiket" value="reguler" checked required>
+              Reguler (Akses 1 Hari)
+            </label>
+            <label>
+              <input type="radio" name="jenisTiket" value="vip">
+              VIP (Akses 2 Hari + Kursi Terdepan)
+            </label>
+            <label>
+              <input type="radio" name="jenisTiket" value="student">
+              Pelajar / Mahasiswa
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="jumlahTiket">Jumlah Tiket yang Dipesan</label>
+          <input type="number" id="jumlahTiket" name="jumlah" min="1" max="5" value="1">
+          <div class="hint">Maksimal 5 tiket per transaksi pendaftaran.</div>
+        </div>
+
+        <div class="field">
+          <label for="trackFokus">Track Pembahasan Utama</label>
+          <select id="trackFokus" name="track">
+            <optgroup label="Frontend Engineering">
+              <option value="html-css">HTML5 Semantic & Modern CSS Architecture</option>
+              <option value="react-next">React & Next.js Performance</option>
+            </optgroup>
+            <optgroup label="Backend & Cloud">
+              <option value="node-api">Node.js High Performance APIs</option>
+              <option value="devops">Docker & Kubernetes Orchestration</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="portofolioUrl">Tautan LinkedIn atau Portofolio (Opsional)</label>
+          <input type="url" id="portofolioUrl" name="portofolio" placeholder="https://linkedin.com/in/profil-anda">
+        </div>
+      </fieldset>
+
+      <!-- Bagian 3: Unggah Berkas & Persetujuan -->
+      <fieldset>
+        <legend>3. Dokumen & Persetujuan</legend>
+
+        <div class="field">
+          <label for="fotoIdentitas">Unggah Foto Kartu Identitas (KTP / Kartu Pelajar)</label>
+          <input type="file" id="fotoIdentitas" name="identitas" accept="image/png, image/jpeg, application/pdf">
+        </div>
+
+        <div class="field">
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="syarat" required>
+              Saya menyatakan data yang diisi adalah valid dan bersedia mematuhi tata tertib konferensi.
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Tombol Submit Formulir -->
+      <button type="submit">Konfirmasi dan Daftarkan Diri Sekarang</button>
+    </form>
+
+    <!-- Elemen Interaktif Native: Details & Summary -->
+    <details>
+      <summary>Pertanyaan Umum Seputar Konferensi (FAQ)</summary>
+      <p style="margin-top: 10px;">
+        <strong>Apakah peserta mendapatkan sertifikat?</strong><br>
+        Ya, seluruh peserta yang hadir akan mendapatkan e-certificate resmi bertaraf internasional.
+      </p>
+      <p>
+        <strong>Apakah tiket dapat dipindahtangankan?</strong><br>
+        Tiket dapat diubah nama kepemilikannya paling lambat 3 hari sebelum acara dimulai melalui panel bantuan.
+      </p>
+    </details>
+
+    <!-- Elemen Modal Dialog Native HTML5 -->
+    <dialog id="modalKonfirmasi">
+      <h2 style="color: #16a34a; margin-top: 0;">Pendaftaran Berhasil Dikirim!</h2>
+      <p id="pesanSukses">
+        Terima kasih telah mendaftar di Nusantara DevCon 2026. Berkas bukti registrasi dan instruksi pembayaran telah dikirimkan ke alamat email Anda.
+      </p>
+      <button type="button" class="btn-close" id="btnTutupDialog">Tutup Notifikasi</button>
+    </dialog>
+  </div>
+
+  <!-- Skrip Minimal Pengendali Dialog Modal Native -->
+  <script>
+    const form = document.getElementById('formRegistrasi');
+    const dialog = document.getElementById('modalKonfirmasi');
+    const btnTutup = document.getElementById('btnTutupDialog');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Mencegah reload halaman
+      dialog.showModal();     // Membuka modal native HTML5
+    });
+
+    btnTutup.addEventListener('click', function() {
+      dialog.close();         // Menutup modal native HTML5
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

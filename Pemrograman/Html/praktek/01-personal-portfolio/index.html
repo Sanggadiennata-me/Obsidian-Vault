@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portofolio profil web developer Aryanda Pratama menggunakan HTML5 semantik murni.">
+  <title>Portofolio Profil - Aryanda Pratama</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+    }
+    header, nav, main, footer, section, article, aside {
+      display: block;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      background-color: #0f172a;
+      border-radius: 6px;
+      padding: 10px 15px;
+    }
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+    }
+    blockquote {
+      border-left: 4px solid #3b82f6;
+      padding-left: 15px;
+      color: #475569;
+      margin: 15px 0;
+      font-style: italic;
+    }
+    fieldset {
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    legend {
+      font-weight: bold;
+      color: #1e293b;
+      padding: 0 6px;
+    }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    input[type="text"], input[type="email"], textarea, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button[type="submit"]:hover {
+      background-color: #1d4ed8;
+    }
+    footer {
+      border-top: 1px solid #e2e8f0;
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header Halaman Semantik -->
+    <header>
+      <h1>Aryanda Pratama</h1>
+      <p>Junior Web Developer & Penggemar Teknologi Perangkat Lunak</p>
+      
+      <!-- Navigasi Menu Semantik -->
+      <nav aria-label="Menu Utama Halaman">
+        <ul>
+          <li><a href="#tentang">Tentang Saya</a></li>
+          <li><a href="#pendidikan">Riwayat Pendidikan</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#proyek">Proyek Unggulan</a></li>
+          <li><a href="#kontak">Hubungi Saya</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Konten Utama Semantik -->
+    <main>
+      <!-- Bagian 1: Tentang Saya -->
+      <section id="tentang">
+        <h2>Tentang Saya</h2>
+        <figure style="float: right; margin: 0 0 15px 15px; max-width: 180px;">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Foto Profil Aryanda" style="width: 100%; border-radius: 8px;">
+          <figcaption style="font-size: 0.8rem; color: #64748b; text-align: center;">Foto resmi profil 2026</figcaption>
+        </figure>
+        <p>
+          Halo! Saya adalah seorang pengembang web yang berfokus pada pembangunan antarmuka situs yang <strong>ramah pengguna</strong>, <em>aksesibel bagi semua orang</em>, serta memiliki performa yang tinggi.
+        </p>
+        <p>
+          Saya percaya bahwa fondasi HTML yang baik adalah kunci dari aplikasi web yang kokoh. Kutipan yang selalu memotivasi saya:
+        </p>
+        <blockquote>
+          "HTML bukan sekadar bahasa markup penyusun tampilan, melainkan kerangka informasi semantik yang menjembatani manusia, mesin pencari, dan teknologi aksesibilitas."
+        </blockquote>
+      </section>
+
+      <hr>
+
+      <!-- Bagian 2: Riwayat Pendidikan & Pengalaman (Tabel Semantik) -->
+      <section id="pendidikan">
+        <h2>Riwayat Pendidikan & Pengalaman</h2>
+        <table>
+          <caption>Tabel Rekam Jejak Akademik dan Pelatihan</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tahun</th>
+              <th scope="col">Institusi / Lembaga</th>
+              <th scope="col">Jurusan / Bidang</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2022 - 2026</td>
+              <td>Universitas Teknologi Nusantara</td>
+              <td>Teknik Informatika</td>
+              <td><mark>Lulus Cumlaude</mark></td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td>Program Pelatihan Web Developer</td>
+              <td>Frontend & Cloud Architecture</td>
+              <td>Tersertifikasi</td>
+            </tr>
+            <tr>
+              <td>2025</td>
+              <td>Studi Independen Pemrograman</td>
+              <td>Fullstack JavaScript</td>
+              <td>Tersertifikasi</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" style="text-align: center; font-style: italic;">Seluruh sertifikat terverifikasi secara resmi.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <hr>
+
+      <!-- Bagian 3: Keahlian (List Semantik) -->
+      <section id="keahlian">
+        <h2>Keahlian Teknis</h2>
+        <p>Berikut adalah beberapa teknologi yang saya kuasai:</p>
+        <ul>
+          <li><strong>Bahasa Markup & Desain:</strong>
+            <ul>
+              <li>HTML5 Semantik murni dan kepatuhan ARIA (A11y)</li>
+              <li>CSS3 Native (Flexbox, Grid, Animasi Keyframes)</li>
+              <li>CSS Framework (Tailwind CSS, Bootstrap 5, Bulma, Semantic UI)</li>
+            </ul>
+          </li>
+          <li><strong>Logika Pemrograman:</strong>
+            <ul>
+              <li>JavaScript (ES6+, DOM Manipulation, Fetch API)</li>
+              <li>Python (Pemrosesan Data dan Skrip Otomasi)</li>
+            </ul>
+          </li>
+          <li><strong>Alat Pengembang:</strong> Git, GitHub, VS Code, Linux Bash Command Line</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <!-- Bagian 4: Proyek Unggulan (Article Semantik) -->
+      <section id="proyek">
+        <h2>Proyek Unggulan</h2>
+        
+        <article>
+          <h3>1. Sistem Manajemen Inventaris Gudang</h3>
+          <p>
+            Dipublikasikan pada <time datetime="2026-08-15">15 Agustus 2026</time>. Aplikasi berbasis web untuk mendata stok barang secara real-time dengan validasi formulir cerdas.
+          </p>
+        </article>
+
+        <article>
+          <h3>2. Portal Pembelajaran Online Responsif</h3>
+          <p>
+            Dipublikasikan pada <time datetime="2026-10-02">2 Oktober 2026</time>. Website edukasi interaktif yang dirancang dengan struktur HTML5 semantik untuk menjamin kemudahan akses bagi pembaca layar (screen reader).
+          </p>
+        </article>
+      </section>
+
+      <hr>
+
+      <!-- Bagian 5: Formulir Kontak Interaktif -->
+      <section id="kontak">
+        <h2>Hubungi Saya</h2>
+        <p>Punya tawaran proyek atau ingin berdiskusi? Silakan kirimkan pesan melalui formulir berikut:</p>
+
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>Informasi Pengirim</legend>
+            <div class="form-group">
+              <label for="namaPengirim">Nama Lengkap:</label>
+              <input type="text" id="namaPengirim" name="nama" placeholder="Contoh: Budi Santoso" required minlength="3">
+            </div>
+            <div class="form-group">
+              <label for="emailPengirim">Alamat Surel (Email):</label>
+              <input type="email" id="emailPengirim" name="email" placeholder="budi@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="kategoriPesan">Topik Pembahasan:</label>
+              <select id="kategoriPesan" name="kategori">
+                <option value="proyek">Tawaran Kerja Proyek Web</option>
+                <option value="konsultasi">Konsultasi Teknis</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Isi Pesan</legend>
+            <div class="form-group">
+              <label for="isiPesan">Tuliskan pesan Anda:</label>
+              <textarea id="isiPesan" name="pesan" rows="4" placeholder="Tulis rincian pesan Anda di sini..." required></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit">Kirimkan Pesan Sekarang</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Halaman Semantik -->
+    <footer>
+      <p>&copy; 2026 Aryanda Pratama. Seluruh hak cipta dilindungi undang-undang.</p>
+      <p>Dibuat murni menggunakan standar kode HTML5 yang valid.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
