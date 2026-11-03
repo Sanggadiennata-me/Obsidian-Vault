@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog Produk Semantic UI</title>
+  
+  <!-- Fomantic-UI (Semantic UI Modern Edition) CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+  
+  <style>
+    body {
+      background-color: #f7f9fa;
+      padding-bottom: 60px;
+    }
+    .main-container {
+      margin-top: 30px;
+    }
+    .product-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Navigasi Atas Menu -->
+  <div class="ui inverted blue borderless menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        <i class="shopping bag icon"></i>
+        TechStore ID
+      </a>
+      <a href="#" class="active item">Semua Produk</a>
+      <a href="#" class="item">Promo Kilat</a>
+      <a href="#" class="item">Garansi Resmi</a>
+
+      <div class="right menu">
+        <div class="item">
+          <div class="ui transparent inverted icon input">
+            <input type="text" placeholder="Cari gadget idaman...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+        <div class="item">
+          <button class="ui teal button">
+            <i class="cart icon"></i>
+            Keranjang
+            <div class="ui floating circular label red">3</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Konten Utama: Sistem Grid 16 Kolom -->
+  <div class="ui container main-container">
+    <div class="ui stackable grid">
+
+      <!-- Kolom Kiri: Filter Menu (4 Wide dari 16 Kolom) -->
+      <div class="four wide column">
+        <div class="ui vertical menu fluid">
+          <div class="header item">
+            <i class="filter icon"></i>
+            Kategori Perangkat
+          </div>
+          <a class="active teal item">
+            Laptop & Komputer
+            <div class="ui teal left pointing label">14</div>
+          </a>
+          <a class="item">
+            Smartphone & Tablet
+            <div class="ui label">8</div>
+          </a>
+          <a class="item">
+            Aksesoris & Audio
+            <div class="ui label">25</div>
+          </a>
+          <a class="item">
+            Smartwatch
+            <div class="ui label">6</div>
+          </a>
+        </div>
+
+        <div class="ui segment">
+          <h4 class="ui header">Rentang Harga</h4>
+          <div class="ui form">
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="harga" checked>
+                <label>Semua Harga</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="harga">
+                <label>Di bawah Rp 5 Juta</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="harga">
+                <label>Rp 5 Juta - Rp 15 Juta</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="harga">
+                <label>Di atas Rp 15 Juta</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Katalog Produk (12 Wide dari 16 Kolom) -->
+      <div class="twelve wide column">
+        <div class="ui clearing segment">
+          <h3 class="ui left floated header">
+            Daftar Produk Unggulan
+            <div class="sub header">Menampilkan 3 dari 45 koleksi gadget terkini</div>
+          </h3>
+          <div class="ui right floated dropdown button">
+            <span class="text">Urutkan: Rekomendasi</span>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item">Rekomendasi</div>
+              <div class="item">Harga Terendah</div>
+              <div class="item">Harga Tertinggi</div>
+              <div class="item">Ulasan Terbanyak</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tiga Kartu Produk Berjejer -->
+        <div class="ui three stackable cards">
+
+          <!-- Kartu 1 -->
+          <div class="ui card">
+            <div class="image">
+              <div class="ui red ribbon label">Diskon 15%</div>
+              <img class="product-img" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop" alt="MacBook Pro">
+            </div>
+            <div class="content">
+              <div class="header">MacBook Pro M3</div>
+              <div class="meta">
+                <span class="category">Laptop & Komputer</span>
+              </div>
+              <div class="description">
+                Performa luar biasa dengan prosesor arsitektur 3nm generasi terbaru untuk kebutuhan komputasi berat.
+              </div>
+            </div>
+            <div class="extra content">
+              <div class="ui right floated primary header" style="margin-bottom: 0; font-size: 1.15rem;">
+                Rp 24.999.000
+              </div>
+              <div class="ui star rating" data-rating="5" data-max-rating="5"></div>
+            </div>
+            <div class="ui bottom attached button primary btn-detail" data-nama="MacBook Pro M3" data-harga="Rp 24.999.000">
+              <i class="eye icon"></i>
+              Lihat Detail
+            </div>
+          </div>
+
+          <!-- Kartu 2 -->
+          <div class="ui card">
+            <div class="image">
+              <div class="ui green ribbon label">Terlaris</div>
+              <img class="product-img" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop" alt="Headphone Wireless">
+            </div>
+            <div class="content">
+              <div class="header">AudioPro Wireless ANC</div>
+              <div class="meta">
+                <span class="category">Aksesoris & Audio</span>
+              </div>
+              <div class="description">
+                Peredam kebisingan aktif tingkat studio dengan daya tahan baterai hingga 40 jam penggunaan nonstop.
+              </div>
+            </div>
+            <div class="extra content">
+              <div class="ui right floated primary header" style="margin-bottom: 0; font-size: 1.15rem;">
+                Rp 2.450.000
+              </div>
+              <div class="ui star rating" data-rating="4" data-max-rating="5"></div>
+            </div>
+            <div class="ui bottom attached button primary btn-detail" data-nama="AudioPro Wireless ANC" data-harga="Rp 2.450.000">
+              <i class="eye icon"></i>
+              Lihat Detail
+            </div>
+          </div>
+
+          <!-- Kartu 3 -->
+          <div class="ui card">
+            <div class="image">
+              <div class="ui blue ribbon label">Baru Masuk</div>
+              <img class="product-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop" alt="Jam Tangan Cerdas">
+            </div>
+            <div class="content">
+              <div class="header">Pulse Watch Series 8</div>
+              <div class="meta">
+                <span class="category">Smartwatch</span>
+              </div>
+              <div class="description">
+                Pelacak kesehatan jantung presisi, GPS mandiri, layar AMOLED cerah, dan ketahanan air hingga 50 meter.
+              </div>
+            </div>
+            <div class="extra content">
+              <div class="ui right floated primary header" style="margin-bottom: 0; font-size: 1.15rem;">
+                Rp 4.199.000
+              </div>
+              <div class="ui star rating" data-rating="4" data-max-rating="5"></div>
+            </div>
+            <div class="ui bottom attached button primary btn-detail" data-nama="Pulse Watch Series 8" data-harga="Rp 4.199.000">
+              <i class="eye icon"></i>
+              Lihat Detail
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. Modal Dialog Pratinjau Produk -->
+  <div class="ui tiny modal" id="modalDetailProduk">
+    <i class="close icon"></i>
+    <div class="header" id="modalJudul">
+      Detail Spesifikasi Produk
+    </div>
+    <div class="content">
+      <div class="ui items">
+        <div class="item">
+          <div class="content">
+            <div class="header" id="modalNamaProduk">Nama Produk</div>
+            <div class="meta">
+              <span class="price" id="modalHargaProduk" style="font-weight: bold; color: #2185d0;">Harga</span>
+            </div>
+            <div class="description">
+              <p>Produk asli bergaransi distributor resmi selama 24 bulan. Layanan purna jual mencakup penggantian unit baru selama 14 hari pertama jika ditemukan cacat pabrik.</p>
+            </div>
+            <div class="extra">
+              <div class="ui green label"><i class="check icon"></i> Stok Tersedia</div>
+              <div class="ui label"><i class="shipping fast icon"></i> Siap Kirim Hari Ini</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui black cancel button">Tutup</div>
+      <div class="ui positive right labeled icon button">
+        Beli Sekarang
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery & Fomantic-UI JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Inisialisasi Rating Star
+      $('.ui.rating').rating({
+        interactive: false
+      });
+
+      // Inisialisasi Dropdown
+      $('.ui.dropdown').dropdown();
+
+      // Inisialisasi Radio Checkbox
+      $('.ui.checkbox').checkbox();
+
+      // Handler Modal Dialog
+      $('.btn-detail').on('click', function() {
+        const nama = $(this).data('nama');
+        const harga = $(this).data('harga');
+
+        $('#modalNamaProduk').text(nama);
+        $('#modalHargaProduk').text(harga);
+        $('#modalDetailProduk').modal('show');
+      });
+    });
+  </script>
+</body>
+</html>

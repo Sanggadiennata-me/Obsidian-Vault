@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal Manajemen Admin Semantic UI</title>
+  
+  <!-- Fomantic-UI CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+  
+  <style>
+    body {
+      background-color: #f4f6f9;
+    }
+    .pusher {
+      padding-top: 70px;
+      padding-bottom: 50px;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body class="pushable">
+
+  <!-- 1. Sidebar Navigasi Geser -->
+  <div class="ui sidebar inverted vertical menu left">
+    <div class="item">
+      <div class="header">
+        <i class="shield alternate icon"></i>
+        Admin Control
+      </div>
+    </div>
+    <a class="active item"><i class="dashboard icon"></i> Ringkasan Utama</a>
+    <a class="item"><i class="users icon"></i> Manajemen Pengguna</a>
+    <a class="item"><i class="credit card icon"></i> Transaksi & Billing</a>
+    <a class="item"><i class="server icon"></i> Status Infrastruktur</a>
+    <a class="item"><i class="settings icon"></i> Pengaturan Sistem</a>
+    <div class="item">
+      <div class="ui orange label">Versi 2.9</div>
+      Pembaruan
+    </div>
+  </div>
+
+  <!-- 2. Navigasi Atas Menu Tetap (Fixed Menu) -->
+  <div class="pusher">
+    <div class="ui top fixed inverted blue menu">
+      <a class="item" id="btnToggleSidebar">
+        <i class="sidebar icon"></i>
+        Menu
+      </a>
+      <div class="header item">
+        CloudManager OS
+      </div>
+      <div class="right menu">
+        <div class="ui dropdown item">
+          <i class="bell icon"></i>
+          Notifikasi
+          <div class="ui red circular mini label">2</div>
+          <div class="menu">
+            <div class="header">Pemberitahuan Sistem</div>
+            <div class="item">Kapasitas penyimpanan server mencapai 85%</div>
+            <div class="item">Sertifikat SSL baru berhasil diperbarui</div>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="user circle icon"></i>
+          Aryanda Pratama
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="#"><i class="id badge icon"></i> Profil Saya</a>
+            <a class="item" href="#"><i class="lock icon"></i> Keamanan Sandi</a>
+            <div class="divider"></div>
+            <a class="item" href="#" style="color: #db2828;"><i class="sign out icon"></i> Keluar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Konten Utama Portal -->
+    <div class="ui container">
+
+      <!-- Header Halaman dan Breadcrumb -->
+      <div class="ui stackable grid">
+        <div class="twelve wide column">
+          <h2 class="ui header">
+            <i class="chart line icon"></i>
+            <div class="content">
+              Panel Pengendalian Sistem
+              <div class="sub header">Pantau performa layanan, beban pengguna, dan tiket bantuan secara real-time.</div>
+            </div>
+          </h2>
+        </div>
+        <div class="four wide column right aligned">
+          <button class="ui green labeled icon button" id="btnBukaModal">
+            <i class="plus icon"></i>
+            Tambah Operator
+          </button>
+        </div>
+      </div>
+
+      <div class="ui divider"></div>
+
+      <!-- Empat Kartu Statistik -->
+      <div class="ui four statistics segment raised">
+        <div class="statistic">
+          <div class="value">
+            <i class="users icon text blue"></i> 14.820
+          </div>
+          <div class="label">Total Pengguna Aktif</div>
+        </div>
+        <div class="statistic">
+          <div class="value">
+            Rp 428 Jt
+          </div>
+          <div class="label">Omzet Bulan Ini</div>
+        </div>
+        <div class="statistic">
+          <div class="value">
+            <i class="ticket alternate icon text orange"></i> 12
+          </div>
+          <div class="label">Tiket Terbuka</div>
+        </div>
+        <div class="statistic">
+          <div class="value">
+            99.98%
+          </div>
+          <div class="label">Tingkat Uptime Server</div>
+        </div>
+      </div>
+
+      <!-- Layout Grid Dua Kolom: Tabel Data dan Formulir Cepat -->
+      <div class="ui stackable grid">
+
+        <!-- Kolom Kiri: Tabel Data (10 Wide dari 16) -->
+        <div class="ten wide column">
+          <div class="ui segment">
+            <h3 class="ui header">
+              <i class="list icon"></i>
+              Daftar Layanan Infrastruktur
+            </h3>
+
+            <table class="ui celled striped table selectable">
+              <thead>
+                <tr>
+                  <th>Nama Node</th>
+                  <th>Wilayah (Region)</th>
+                  <th>Beban CPU</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>node-sgp-01</strong></td>
+                  <td>Singapore (AP-SE)</td>
+                  <td>
+                    <div class="ui tiny progress green active" data-percent="35">
+                      <div class="bar" style="width: 35%;"></div>
+                    </div>
+                  </td>
+                  <td><span class="ui green label">Normal</span></td>
+                  <td>
+                    <button class="ui mini basic blue button">Pantau</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>node-jkt-02</strong></td>
+                  <td>Jakarta (ID-JKT)</td>
+                  <td>
+                    <div class="ui tiny progress orange active" data-percent="78">
+                      <div class="bar" style="width: 78%;"></div>
+                    </div>
+                  </td>
+                  <td><span class="ui orange label">Beban Tinggi</span></td>
+                  <td>
+                    <button class="ui mini basic blue button">Pantau</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>node-tok-01</strong></td>
+                  <td>Tokyo (AP-NE)</td>
+                  <td>
+                    <div class="ui tiny progress green active" data-percent="22">
+                      <div class="bar" style="width: 22%;"></div>
+                    </div>
+                  </td>
+                  <td><span class="ui green label">Normal</span></td>
+                  <td>
+                    <button class="ui mini basic blue button">Pantau</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Formulir Cepat dengan Validasi Bawaan (6 Wide dari 16) -->
+        <div class="six wide column">
+          <div class="ui segment">
+            <h3 class="ui header">
+              <i class="envelope icon"></i>
+              Kirim Pemberitahuan Darurat
+            </h3>
+
+            <form class="ui form" id="formDarurat">
+              <div class="field">
+                <label>Judul Pemberitahuan</label>
+                <input type="text" name="judul" placeholder="Contoh: Pemeliharaan Sistem">
+              </div>
+
+              <div class="field">
+                <label>Tingkat Prioritas</label>
+                <div class="ui selection dropdown">
+                  <input type="hidden" name="prioritas">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Pilih Tingkat Prioritas</div>
+                  <div class="menu">
+                    <div class="item" data-value="rendah"><i class="blue circle icon"></i> Informasi Biasa</div>
+                    <div class="item" data-value="sedang"><i class="yellow circle icon"></i> Peringatan Sedang</div>
+                    <div class="item" data-value="tinggi"><i class="red circle icon"></i> Kritis / Darurat</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Pesan Broadcast</label>
+                <textarea rows="3" name="pesan" placeholder="Tulis instruksi bagi seluruh operator..."></textarea>
+              </div>
+
+              <!-- Pesan Error Validasi Otomatis -->
+              <div class="ui error message"></div>
+
+              <button class="ui primary fluid button" type="submit">
+                <i class="paper plane icon"></i>
+                Kirim Broadcast Sekarang
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal Tambah Operator Baru -->
+  <div class="ui tiny modal" id="modalOperator">
+    <i class="close icon"></i>
+    <div class="header">
+      <i class="user plus icon"></i>
+      Pendaftaran Operator Baru
+    </div>
+    <div class="content">
+      <form class="ui form" id="formModalOperator">
+        <div class="field">
+          <label>Nama Lengkap</label>
+          <input type="text" placeholder="Masukkan nama operator">
+        </div>
+        <div class="field">
+          <label>Alamat Email Kantor</label>
+          <input type="email" placeholder="nama@cloudmanager.id">
+        </div>
+        <div class="field">
+          <label>Hak Akses Level</label>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="role">
+            <i class="dropdown icon"></i>
+            <div class="default text">Pilih Hak Akses</div>
+            <div class="menu">
+              <div class="item" data-value="admin">Super Administrator</div>
+              <div class="item" data-value="devops">DevOps Engineer</div>
+              <div class="item" data-value="auditor">Auditor (Read-Only)</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui cancel button">Batal</div>
+      <div class="ui positive button" id="btnSimpanOperator">Simpan Operator</div>
+    </div>
+  </div>
+
+  <!-- jQuery & Fomantic-UI JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // 1. Toggle Sidebar Geser
+      $('#btnToggleSidebar').on('click', function() {
+        $('.ui.sidebar').sidebar('toggle');
+      });
+
+      // 2. Dropdown Inisialisasi
+      $('.ui.dropdown').dropdown();
+
+      // 3. Modal Handler
+      $('#btnBukaModal').on('click', function() {
+        $('#modalOperator').modal('show');
+      });
+
+      // 4. Modul Validasi Formulir Otomatis Semantic UI
+      $('#formDarurat').form({
+        fields: {
+          judul: {
+            identifier: 'judul',
+            rules: [
+              {
+                type: 'empty',
+                prompt: 'Silakan isi judul pemberitahuan terlebih dahulu.'
+              }
+            ]
+          },
+          prioritas: {
+            identifier: 'prioritas',
+            rules: [
+              {
+                type: 'empty',
+                prompt: 'Tingkat prioritas wajib dipilih.'
+              }
+            ]
+          },
+          pesan: {
+            identifier: 'pesan',
+            rules: [
+              {
+                type: 'minLength[10]',
+                prompt: 'Pesan broadcast minimal berisi 10 karakter.'
+              }
+            ]
+          }
+        },
+        onSuccess: function(event) {
+          event.preventDefault();
+          alert('Pemberitahuan darurat telah berhasil dikirim ke seluruh operator!');
+          $('#formDarurat').form('reset');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
