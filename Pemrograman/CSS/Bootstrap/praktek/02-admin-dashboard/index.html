@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktek 02: Admin Dashboard (Bootstrap 5)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-body-tertiary">
+  <!-- Top Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2 px-3 shadow-sm">
+    <div class="container-fluid">
+      <button class="btn btn-outline-secondary me-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <span class="navbar-brand fw-bold text-primary mb-0 h1">NexusAdmin</span>
+      
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <button class="btn btn-primary btn-sm rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#tambahModal">
+          <i class="bi bi-plus-lg me-1"></i> Data Baru
+        </button>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-center fw-bold me-2" style="width: 34px; height: 34px; line-height: 34px; text-align: center;">A</div>
+            <span class="d-none d-md-inline fw-semibold text-sm">Aryanda</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profil</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Pengaturan</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i>Keluar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Sidebar Drawer -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" style="width: 280px;">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold text-primary">Menu Navigasi</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action active py-3">
+          <i class="bi bi-speedometer2 me-2"></i> Dashboard Utama
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-people me-2"></i> Manajemen Pengguna
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-shield-lock me-2"></i> Log Keamanan
+        </a>
+        <a href="#" class="list-group-item list-group-item-action py-3">
+          <i class="bi bi-gear me-2"></i> Konfigurasi Sistem
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Dashboard -->
+  <main class="container-fluid p-4">
+    <!-- Alert Banner -->
+    <div class="alert alert-info alert-dismissible fade show border-0 shadow-sm rounded-3 mb-4" role="alert">
+      <i class="bi bi-info-circle-fill me-2"></i>
+      <strong>Pemberitahuan Sistem:</strong> Server database telah diperbarui ke versi stabil terbaru tanpa gangguan operasional.
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- KPI Summary Cards (Grid 12 Kolom) -->
+    <div class="row g-3 mb-4">
+      <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm rounded-4 p-2">
+          <div class="card-body">
+            <span class="text-secondary small fw-semibold">TOTAL PENDAPATAN</span>
+            <h3 class="fw-bold my-2 text-dark">Rp 128.4M</h3>
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">
+              <i class="bi bi-arrow-up-right"></i> +12.5%
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm rounded-4 p-2">
+          <div class="card-body">
+            <span class="text-secondary small fw-semibold">PENGGUNA AKTIF</span>
+            <h3 class="fw-bold my-2 text-dark">14,290</h3>
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">
+              <i class="bi bi-arrow-up-right"></i> +8.2%
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm rounded-4 p-2">
+          <div class="card-body">
+            <span class="text-secondary small fw-semibold">PERMINTAAN TIKET</span>
+            <h3 class="fw-bold my-2 text-dark">48</h3>
+            <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle rounded-pill">
+              2 Menunggu
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="card border-0 shadow-sm rounded-4 p-2">
+          <div class="card-body">
+            <span class="text-secondary small fw-semibold">UPTIME SERVER</span>
+            <h3 class="fw-bold my-2 text-dark">99.98%</h3>
+            <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle rounded-pill">
+              Stabil
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Table Card -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+      <div class="card-header bg-white py-3 px-4 border-bottom d-flex justify-content-between align-items-center">
+        <h5 class="fw-bold mb-0 text-dark">Daftar Akun Pengguna</h5>
+        <span class="badge bg-light text-dark border">4 Entri Ditampilkan</span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light text-secondary small text-uppercase">
+            <tr>
+              <th class="ps-4">Nama Lengkap</th>
+              <th>Jabatan</th>
+              <th>Status</th>
+              <th>Terakhir Masuk</th>
+              <th class="text-end pe-4">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ps-4 fw-semibold text-dark">Aryanda Saputra</td>
+              <td>Lead Security Engineer</td>
+              <td><span class="badge bg-success rounded-pill">Aktif</span></td>
+              <td class="text-secondary small">Hari ini, 09:15</td>
+              <td class="text-end pe-4">
+                <button class="btn btn-sm btn-outline-primary rounded-pill px-3">Detail</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="ps-4 fw-semibold text-dark">Budi Santoso</td>
+              <td>DevOps Specialist</td>
+              <td><span class="badge bg-success rounded-pill">Aktif</span></td>
+              <td class="text-secondary small">Kemarin, 14:20</td>
+              <td class="text-end pe-4">
+                <button class="btn btn-sm btn-outline-primary rounded-pill px-3">Detail</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="ps-4 fw-semibold text-dark">Citra Kirana</td>
+              <td>Frontend Architect</td>
+              <td><span class="badge bg-warning text-dark rounded-pill">Menunggu</span></td>
+              <td class="text-secondary small">3 hari lalu</td>
+              <td class="text-end pe-4">
+                <button class="btn btn-sm btn-outline-primary rounded-pill px-3">Detail</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="ps-4 fw-semibold text-dark">Dodi Firmansyah</td>
+              <td>QA Tester</td>
+              <td><span class="badge bg-secondary rounded-pill">Nonaktif</span></td>
+              <td class="text-secondary small">1 minggu lalu</td>
+              <td class="text-end pe-4">
+                <button class="btn btn-sm btn-outline-primary rounded-pill px-3">Detail</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Tambah Data Pop-up -->
+  <div class="modal fade" id="tambahModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow rounded-4">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold">Tambah Data Pengguna</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Nama Lengkap</label>
+              <input type="text" class="form-control rounded-3" placeholder="Contoh: Andi Pratama">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Alamat Email</label>
+              <input type="email" class="form-control rounded-3" placeholder="andi@nexus.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Hak Akses Peran</label>
+              <select class="form-select rounded-3">
+                <option selected>Pilih peran...</option>
+                <option value="1">Administrator</option>
+                <option value="2">Editor</option>
+                <option value="3">Viewer</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-top bg-light rounded-bottom-4">
+          <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary rounded-3 px-4">Simpan Akun</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
